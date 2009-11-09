@@ -2,7 +2,7 @@
 #
 
 PACKAGE_CONFIGURE   = ./configure
-PACKAGE_MAKE        = gmake
+PACKAGE_MAKE        = make
 PACKAGE_MAKEFILE    = Makefile
 PACKAGE_MAKEFILEOPT = -f
 PACKAGE_CLEANOPTS   = clean
