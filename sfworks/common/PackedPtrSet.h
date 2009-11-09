@@ -76,7 +76,7 @@ public:
         for(; *vp; ++vp) {
             if (*vp == p)
                 return false;
-            if (((int)(*vp)) & 01) {
+            if (((long int)(*vp)) & 01) {
                 *vp = p;
                 return true;
             }

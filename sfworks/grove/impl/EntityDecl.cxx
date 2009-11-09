@@ -405,7 +405,7 @@ XincludeDecl::XincludeDecl()
 {
     declType_ = xinclude;
     dataType_ = sgml;
-    setName("XI:" + String::number((int)this));
+    setName("XI:" + String::number((long int)this));
 }
 
 String XincludeDecl::asAnnotationString() const

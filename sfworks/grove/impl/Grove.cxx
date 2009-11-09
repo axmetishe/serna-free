@@ -137,7 +137,7 @@ GROVE_EXPIMP void release_locks(Grove* g)
     if (g->groveBuilder()->flags() & 
         (GroveBuilder::doLocks|GroveBuilder::checkLocks)) 
             Dav::DavManager::instance().lock(Url("http://"),
-                Dav::DAV_UNLOCK, (int) g);
+                Dav::DAV_UNLOCK, (long int) g);
 }
 
 Grove::~Grove()
@@ -307,10 +307,10 @@ static bool do_lock_resource(const String& url, const Grove* grove)
 {
     if (grove->groveBuilder()->flags() & GroveBuilder::doLocks)
         return Dav::DavManager::instance().lock(url, Dav::DAV_LOCK, 
-            (int) grove) != Dav::DAV_RESULT_OK;
+            (long int) grove) != Dav::DAV_RESULT_OK;
     if (grove->groveBuilder()->flags() & GroveBuilder::checkLocks)
         return Dav::DavManager::instance().lock(url, Dav::DAV_CHECK_LOCK, 
-            (int) grove) == Dav::DAV_RESULT_LOCKED;
+            (long int) grove) == Dav::DAV_RESULT_LOCKED;
     return false;
 }
     
