@@ -55,7 +55,7 @@
 
 namespace StringPrivate {
 
-typedef unsigned int size_type;
+typedef unsigned long int size_type;
 
 struct InpIterTag {};
 struct RndIterTag {};

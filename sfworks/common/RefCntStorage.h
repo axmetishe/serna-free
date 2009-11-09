@@ -54,7 +54,7 @@
 
 namespace StringPrivate {
 
-typedef unsigned int size_type;
+typedef unsigned long int size_type;
 
 template<typename E> struct RefCntData : public COMMON_NS::RefCounted<> {
     size_type   size_;
