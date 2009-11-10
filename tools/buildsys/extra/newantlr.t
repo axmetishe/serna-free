@@ -27,9 +27,7 @@ unless (Project("ANTLR_T_INCLUDED")) {
     Project('FILES_TO_CLEAN += $(ANTLR_GRAMMAR) ' . join(' ', @cleanfiles));
 }
 #$}
-ANTLR_CLASSPATH = #$ Expand("ANTLR_CLASSPATH");
-ANTLR           = $(JAVA) $(CLASSPATH_OPT) $(CLASSPATH)$(ANTLR_CLASSPATH) \
-                  antlr.Tool
+ANTLR           = runantlr
 ANTLR_FLAGS     = #$ Expand("ANTLR_FLAGS");
 ANTLR_INPUT     = #$ Expand("ANTLR_INPUT");
 

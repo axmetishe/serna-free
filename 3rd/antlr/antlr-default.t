@@ -2,10 +2,6 @@
     IncludeTemplate("3rd/pkg-utils.t");
     IncludeTemplate("pkg-info");
     my $third_dir = expand_path(Project("THIRD_DIR"));
-    my $java = get_package_info("java", "JAVA");
-    my $antlr = "$java -classpath $third_dir/antlr antlr.Tool";
-    my $antlr_script = "$third_dir/bin/antlr";
-    $antlr_script .= '.bat' unless $is_unix;
     write_script($antlr_script, $antlr);
 
     my %pkg = ( NAME => 'antlr' );
@@ -17,6 +13,11 @@
         write_file("$thidr_dir/antlr/MANIFEST","");
         Project("TMAKE_TEMPLATE=");
     } else {
+        my $java = get_package_info("java", "JAVA");
+        my $antlr = "$java -classpath $third_dir/antlr antlr.Tool";
+        my $antlr_script = "$third_dir/bin/antlr";
+        $antlr_script .= '.bat' unless $is_unix;
+
         $pkg{'ANTLR'} = normpath($antlr_script);
         if ($is_unix) {
             $pkg{'INCLUDES'} = '$(THIRD_DIR)/antlr/include';
