@@ -57,8 +57,12 @@ private:
 public: // ANTLR interface
 
     ///////////////////////////////////////////////////////////
+    
+    virtual const char* typeName( void ) const;
+    virtual antlr::RefAST clone( void ) const; 
 
     virtual void addChild(antlr::RefAST c);
+    virtual size_t getNumberOfChildren() const;
 
     virtual bool equals(antlr::RefAST t) const;
     virtual bool equalsList(antlr::RefAST t) const;
