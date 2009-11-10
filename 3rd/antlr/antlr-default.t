@@ -9,18 +9,27 @@
     write_script($antlr_script, $antlr);
 
     my %pkg = ( NAME => 'antlr' );
-    $pkg{'ANTLR'} = normpath($antlr_script);
-    if ($is_unix) {
-        $pkg{'INCLUDES'} = '$(THIRD_DIR)/antlr/include';
-        $pkg{'LIBS'} 	 = 'antlr';
-        $pkg{'LFLAGS'}   = '-L$(THIRD_DIR)/lib';
+    if (Config("syspkg") || Config("syspkgonly")) {
+        $pkg{'ANTLR'} = "/usr/bin/runantr";
+        $pkg{'INCLUDES'} = `antlr-config --cxxflags`;
+        $pkg{'LIBS'} = "antlr";
+        write_package("$third_dir/lib/antlr.pkg", \%pkg);
+        write_file("$thidr_dir/antlr/MANIFEST","");
+        Project("TMAKE_TEMPLATE=");
+    } else {
+        $pkg{'ANTLR'} = normpath($antlr_script);
+        if ($is_unix) {
+            $pkg{'INCLUDES'} = '$(THIRD_DIR)/antlr/include';
+            $pkg{'LIBS'} 	 = 'antlr';
+            $pkg{'LFLAGS'}   = '-L$(THIRD_DIR)/lib';
+        }
+        else {
+            my $d = 'd' if Config("debug");
+            $pkg{'INCLUDES'} = '$(THIRD_DIR)/antlr/include';
+            $pkg{'LIBS'} 	 = "\$(THIRD_DIR)\\lib\\antlr$d.lib";
+        }
+        write_package("$third_dir/lib/antlr.pkg", \%pkg);
     }
-    else {
-        my $d = 'd' if Config("debug");
-        $pkg{'INCLUDES'} = '$(THIRD_DIR)/antlr/include';
-        $pkg{'LIBS'} 	 = "\$(THIRD_DIR)\\lib\\antlr$d.lib";
-    }
-    write_package("$third_dir/lib/antlr.pkg", \%pkg);
 
     return unless Config("darwin");
     my $sdkroot = "/Developer/SDKs/MacOSX10.4u.sdk";
