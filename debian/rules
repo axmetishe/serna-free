@@ -33,7 +33,7 @@ override_dh_clean:
 	
 	# Above commands are far from complete
 	rm -rf build/serna build/sfworks/ build/GNUmakefile
-	rm -f tools/msggen/*.pyc
+	rm -f tools/*/*.pyc 
 	rm -f 3rd/Makefile
 	rm -f 3rd/*/Makefile 3rd/*/cbuild.log
 	rm -f   3rd/antlr/2.7.1/Makefile \
