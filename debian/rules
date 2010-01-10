@@ -8,14 +8,20 @@ override_dh_auto_configure:
 override_dh_auto_build:
 	# Put 3rd party packages where the serna build system expects them
 	mkdir -p 3rd/packages
-	( cd 3rd/packages; ln -s ../../debian/3rd/* . )
+	( cd 3rd/packages; ln -sf ../../debian/3rd/* . )
 	
 	# Build/Prepare 3rd party packages
 	cd 3rd; ./configure syspkgonly && ./checked_build.sh
 	
 	# Build serna
 	cd build; ./configure syspkg && make
+	
+	# Put file to install in place
+	cd build/serna/app; make .pkg_dir
 
+override_dh_auto_install:
+	mkdir -p debian/serna/usr/bin
+	install -m755 build/serna/app/pkg/opt/serna-free-*/bin/serna.bin debian/serna/usr/bin/serna
 
 override_dh_clean:
 	dh_clean
