@@ -17,3 +17,4 @@
 0017-Working-exports.lst-even-if-list-is-empty.patch
 0018-dash-compliance-Do-not-use-echo-e.patch
 0019-Set-rpath-for-serna-executable.patch
+0020-Hardcode-usr-lib-serna-as-DataDir.patch
