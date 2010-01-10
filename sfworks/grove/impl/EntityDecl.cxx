@@ -39,6 +39,8 @@
 #include "grove/EntityReferenceTable.h"
 #include "grove/EntityDeclSet.h"
 
+#include "stdio.h"
+
 using namespace Common;
 
 namespace GroveLib {
