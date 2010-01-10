@@ -16,3 +16,4 @@
 0016-Make-base-classes-public-where-required.patch
 0017-Working-exports.lst-even-if-list-is-empty.patch
 0018-dash-compliance-Do-not-use-echo-e.patch
+0019-Set-rpath-for-serna-executable.patch
