@@ -218,8 +218,7 @@ String get_data_dir()
     if (!value.empty())
         return value;
 
-    String value("/usr/lib/serna");
-    return value;
+    return String("/usr/lib/serna");
 }
 
 struct ParamDesc {
