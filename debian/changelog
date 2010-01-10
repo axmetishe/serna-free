@@ -1,0 +1,5 @@
+serna-free (0~svn139-1) UNRELEASED; urgency=low
+
+  * Initial release. (Closes: #535828)
+
+ -- Joachim Breitner <nomeata@debian.org>  Sun, 10 Jan 2010 16:51:08 +0100

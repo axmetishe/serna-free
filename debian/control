@@ -1,0 +1,22 @@
+Source: serna-free
+Section: text
+Priority: extra
+Maintainer: Joachim Breitner <nomeata@debian.org>
+Build-Depends:
+ debhelper (>= 7)
+Standards-Version: 3.8.3
+Homepage: http://www.syntext.com/products/serna-free/
+
+Package: serna
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Graphical XML editor
+ Serna Free Open Source XML editor is an easy-to-use visual XML
+ application which requires virtually no technical experience from
+ technical writers to author XML documents.
+ . 
+ Serna Free Open Source XML editor hides all the complexities of the
+ underlying XML technology.
+ .
+ Serna Free XML editor employs XSLT and XSL-FO to render XML documents
+ in print-like appearance for fast and easy authoring.

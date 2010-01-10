@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_configure:
+	# We do all in build. Why not?
+
+override_dh_auto_build:
+	# Put 3rd party packages where the serna build system expects them
+	mkdir -p 3rd/packages
+	( cd 3rd/packages; ln -s ../../debian/3rd/* . )
+	
+	# Build/Prepare 3rd party packages
+	cd 3rd; ./configure syspkgonly && ./checked_build.sh
+	
+	# Build serna
+	cd build; ./configure syspkg && make
+
+
+override_dh_clean:
+	dh_clean
+	rm -f 3rd/packages/*
