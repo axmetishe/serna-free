@@ -1,0 +1,28 @@
+From ae4ddaf8cb58ea17208fec88b28746eff7f6fea2 Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Tue, 10 Nov 2009 15:14:11 +0100
+Subject: Fix aspell.hpp import (why did it not work?)
+
+---
+ serna/plugins/speller/aspell/AspellLibrary.h |    4 ----
+ 1 files changed, 0 insertions(+), 4 deletions(-)
+
+diff --git a/serna/plugins/speller/aspell/AspellLibrary.h b/serna/plugins/speller/aspell/AspellLibrary.h
+index 6b095cf..ae21f2a 100644
+--- a/serna/plugins/speller/aspell/AspellLibrary.h
++++ b/serna/plugins/speller/aspell/AspellLibrary.h
+@@ -45,11 +45,7 @@
+ #include "common/PropertyTree.h"
+ #include "common/StringDecl.h"
+ 
+-#ifndef SERNA_SYSPKG
+ # include "aspell.hpp"
+-#else
+-# include <aspell.h>
+-#endif
+ 
+ class AspellLibrary : protected Common::DynamicLibrary {
+ public:
+-- 
+1.6.6
+

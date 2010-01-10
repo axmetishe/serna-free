@@ -1,0 +1,33 @@
+From 3133a67003aefd34eb6a6a4ff098fad084385e44 Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Sun, 10 Jan 2010 13:38:29 +0100
+Subject: Working exports.lst even if list is empty
+
+---
+ serna/app/makeldscript.pl |    9 ++++++---
+ 1 files changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/serna/app/makeldscript.pl b/serna/app/makeldscript.pl
+index 328fe2d..042a58f 100755
+--- a/serna/app/makeldscript.pl
++++ b/serna/app/makeldscript.pl
+@@ -7,10 +7,13 @@ while (<>) {
+     $symbols{$1} = 1;
+ }
+ 
+-print "{\n\tglobal:\n";
++print "{\n";
++if (%symbols) {
++	print "\tglobal:\n";
+ 
+-for $s (keys(%symbols)) {
+-    print "\t\t$s;\n"
++	for $s (keys(%symbols)) {
++	    print "\t\t$s;\n"
++	}
+ }
+ 
+ print "\tlocal: *;\n};\n";
+-- 
+1.6.6
+

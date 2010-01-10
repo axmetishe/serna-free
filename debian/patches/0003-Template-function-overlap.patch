@@ -1,0 +1,25 @@
+From 6bce4c69043c1e0fb60e20a831fdadada60d3570 Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Mon, 9 Nov 2009 12:12:32 +0100
+Subject: Template function overlap
+
+---
+ sfworks/common/IterTraits.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/sfworks/common/IterTraits.h b/sfworks/common/IterTraits.h
+index 865ca60..30cf3db 100644
+--- a/sfworks/common/IterTraits.h
++++ b/sfworks/common/IterTraits.h
+@@ -97,7 +97,7 @@ template<> struct IterTagSelect<PtrIterTag> {
+ };
+ #endif
+ 
+-template<> struct InpIterTraits<size_type> {
++template<> struct InpIterTraits<unsigned int> {
+     typedef IntIterTag iterator_tag;
+ };
+ 
+-- 
+1.6.6
+

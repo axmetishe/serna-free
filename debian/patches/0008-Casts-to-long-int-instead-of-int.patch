@@ -1,0 +1,162 @@
+From bbf6fa6c2c06f910dd88589d81030130af6de09e Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Mon, 9 Nov 2009 12:16:51 +0100
+Subject: Casts to (long int) instead of (int)
+
+---
+ serna/docview/impl/EventTranslator.cxx |    4 ++--
+ serna/plugins/pyplugin/pyplugin.cxx    |    4 ++--
+ serna/pyapi/common/WrappedObject.sip   |    2 +-
+ sfworks/common/PackedPtrSet.h          |    2 +-
+ sfworks/grove/impl/EntityDecl.cxx      |    2 +-
+ sfworks/grove/impl/Grove.cxx           |    6 +++---
+ sfworks/xs/XsDataImpl.cxx              |    2 +-
+ sfworks/xslt/impl/Instance.cxx         |    2 +-
+ sfworks/xslt/impl/functions3.cxx       |    2 +-
+ 9 files changed, 13 insertions(+), 13 deletions(-)
+
+diff --git a/serna/docview/impl/EventTranslator.cxx b/serna/docview/impl/EventTranslator.cxx
+index 75f2a94..ec6de57 100644
+--- a/serna/docview/impl/EventTranslator.cxx
++++ b/serna/docview/impl/EventTranslator.cxx
+@@ -55,7 +55,7 @@ void EventTranslator::registerEvent(const Sui::Action* action,
+                                     EventMakerPtr eventMaker)
+ {
+     DBG(DV.EVENT) << "EventTranslator: register " << action->get(NAME)
+-                  << " maker " << (int)eventMaker << std::endl;
++                  << " maker " << (long int)eventMaker << std::endl;
+     (*eventMap_)[action] = eventMaker;
+ }
+ 
+@@ -138,7 +138,7 @@ void EventTranslator::registerActionExecutor(ActionExecutor* executor)
+ {
+     DBG(DV.EVENT) << "EventTranslator: register "  << executor << "/"
+                   << executor->uiAction_->get(NAME)
+-                  << " action-executor " << (int)executor << std::endl;
++                  << " action-executor " << (long int)executor << std::endl;
+     (*actionExecutorMap_)[executor->uiAction()] = executor;
+     executor->eventTranslator_ = this;
+ }
+diff --git a/serna/plugins/pyplugin/pyplugin.cxx b/serna/plugins/pyplugin/pyplugin.cxx
+index c32376b..ec03b8d 100644
+--- a/serna/plugins/pyplugin/pyplugin.cxx
++++ b/serna/plugins/pyplugin/pyplugin.cxx
+@@ -213,9 +213,9 @@ static PyObject* init_pyclass(SernaApiBase* props, SString& className)
+         DYNCALL("Py_Initialize");
+         DYNCALL("PyEval_InitThreads");
+         PropertyNode cfgRoot(SernaConfig::root());
+-        int pfunc = (int)DL_SYM("PyRun_SimpleString");
++        long int pfunc = (long int)DL_SYM("PyRun_SimpleString");
+         cfgRoot.makeDescendant(PYTHON_RSS_PROP).setInt(pfunc);
+-        pfunc = (int)py_run_file;
++        pfunc = (long int)py_run_file;
+         cfgRoot.makeDescendant(PYTHON_RSF_PROP).setInt(pfunc);
+         SString plugins_bin_dir = SernaConfig::getProperty("vars/plugins_bin");
+         SString data_dir = SernaConfig::getProperty("vars/data_dir");
+diff --git a/serna/pyapi/common/WrappedObject.sip b/serna/pyapi/common/WrappedObject.sip
+index 4388e89..dee1dc8 100644
+--- a/serna/pyapi/common/WrappedObject.sip
++++ b/serna/pyapi/common/WrappedObject.sip
+@@ -16,7 +16,7 @@ public:
+ %End
+     int __int__();
+ %MethodCode
+-        sipRes = (int)sipCpp->getRep();
++        sipRes = (long int)sipCpp->getRep();
+ %End
+     bool operator==(const SimpleWrappedObject&) const;
+     bool operator!=(const SimpleWrappedObject&) const;
+diff --git a/sfworks/common/PackedPtrSet.h b/sfworks/common/PackedPtrSet.h
+index 4687fbf..1326790 100644
+--- a/sfworks/common/PackedPtrSet.h
++++ b/sfworks/common/PackedPtrSet.h
+@@ -76,7 +76,7 @@ public:
+         for(; *vp; ++vp) {
+             if (*vp == p)
+                 return false;
+-            if (((int)(*vp)) & 01) {
++            if (((long int)(*vp)) & 01) {
+                 *vp = p;
+                 return true;
+             }
+diff --git a/sfworks/grove/impl/EntityDecl.cxx b/sfworks/grove/impl/EntityDecl.cxx
+index ca571c7..ba537ca 100644
+--- a/sfworks/grove/impl/EntityDecl.cxx
++++ b/sfworks/grove/impl/EntityDecl.cxx
+@@ -405,7 +405,7 @@ XincludeDecl::XincludeDecl()
+ {
+     declType_ = xinclude;
+     dataType_ = sgml;
+-    setName("XI:" + String::number((int)this));
++    setName("XI:" + String::number((long int)this));
+ }
+ 
+ String XincludeDecl::asAnnotationString() const
+diff --git a/sfworks/grove/impl/Grove.cxx b/sfworks/grove/impl/Grove.cxx
+index 752474e..1f472bc 100644
+--- a/sfworks/grove/impl/Grove.cxx
++++ b/sfworks/grove/impl/Grove.cxx
+@@ -137,7 +137,7 @@ GROVE_EXPIMP void release_locks(Grove* g)
+     if (g->groveBuilder()->flags() & 
+         (GroveBuilder::doLocks|GroveBuilder::checkLocks)) 
+             Dav::DavManager::instance().lock(Url("http://"),
+-                Dav::DAV_UNLOCK, (int) g);
++                Dav::DAV_UNLOCK, (long int) g);
+ }
+ 
+ Grove::~Grove()
+@@ -307,10 +307,10 @@ static bool do_lock_resource(const String& url, const Grove* grove)
+ {
+     if (grove->groveBuilder()->flags() & GroveBuilder::doLocks)
+         return Dav::DavManager::instance().lock(url, Dav::DAV_LOCK, 
+-            (int) grove) != Dav::DAV_RESULT_OK;
++            (long int) grove) != Dav::DAV_RESULT_OK;
+     if (grove->groveBuilder()->flags() & GroveBuilder::checkLocks)
+         return Dav::DavManager::instance().lock(url, Dav::DAV_CHECK_LOCK, 
+-            (int) grove) == Dav::DAV_RESULT_LOCKED;
++            (long int) grove) == Dav::DAV_RESULT_LOCKED;
+     return false;
+ }
+     
+diff --git a/sfworks/xs/XsDataImpl.cxx b/sfworks/xs/XsDataImpl.cxx
+index 3c6ab12..e11edaf 100644
+--- a/sfworks/xs/XsDataImpl.cxx
++++ b/sfworks/xs/XsDataImpl.cxx
+@@ -221,7 +221,7 @@ const String& XsDataImpl::targetNsUri() const
+ NcnCred XsDataImpl::makeCred(const String& name, bool pvt) const
+ {
+     if (pvt)
+-        return NcnCred(name, "pns" + String::number((uint)this));
++        return NcnCred(name, "pns" + String::number((unsigned long int)this));
+     return NcnCred(name, targetNs_);
+ }
+ 
+diff --git a/sfworks/xslt/impl/Instance.cxx b/sfworks/xslt/impl/Instance.cxx
+index 4f04fb4..ac47f94 100644
+--- a/sfworks/xslt/impl/Instance.cxx
++++ b/sfworks/xslt/impl/Instance.cxx
+@@ -343,7 +343,7 @@ void Instance::dump() const
+         << " PS:" << prevSibling() << " NS:" << nextSibling()
+         << " R" << getRefCnt() << " S#:" << siblingIndex_
+         << " ctx "<< nsiContext().node()
+-        << "/<" << (((int)nsiContext().node() > 0x1000000) ?
++        << "/<" << (((long int)nsiContext().node() > 0x1000000) ?
+             nsiContext().node()->nodeName() : String("*BAD*"))
+         << ">" << std::endl;
+     for (const Instance* i = firstChild(); i; i = i->nextSibling()) {
+diff --git a/sfworks/xslt/impl/functions3.cxx b/sfworks/xslt/impl/functions3.cxx
+index 30bcfff..df2b6c6 100644
+--- a/sfworks/xslt/impl/functions3.cxx
++++ b/sfworks/xslt/impl/functions3.cxx
+@@ -158,7 +158,7 @@ FunctionExprImpl<XsltFunctionId::GenerateId>::eval(const Xpath::NodeSetItem& nsi
+     } else
+         throw Xslt::Exception(XsltMessages::xpathEvalArgs,
+                               ei.exprContext().contextString());
+-    return new Xpath::StringValue("X" + String::number((uint)n, 16));
++    return new Xpath::StringValue("X" + String::number((unsigned long int)n, 16));
+ }
+ 
+ ///////////////////////////////////////////////////////////////
+-- 
+1.6.6
+

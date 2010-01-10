@@ -1,0 +1,27 @@
+From 262f650e8ef763502b84fb6a368973be40ff0a42 Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Sun, 10 Jan 2010 12:20:36 +0100
+Subject: Creating necessary empty directories in 3rd/
+
+---
+ 3rd/configure |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+diff --git a/3rd/configure b/3rd/configure
+index 4f9948f..574df56 100755
+--- a/3rd/configure
++++ b/3rd/configure
+@@ -24,6 +24,10 @@ CWD=`pwd`
+ cd "$top_srcdir"
+ top_srcdir=`pwd`
+ cd $CWD
++
++# Creating necessary empty directories
++mkdir -p "$top_srcdir/3rd/bin" "$top_srcdir/3rd/lib" "$top_srcdir/3rd/jade/lib"
++
+ TMAKE=$top_srcdir/tools/buildsys/tmake/bin/tmake
+ 
+ PLATFORM=`uname | tr 'A-Z' 'a-z' | tr -d '\n'`
+-- 
+1.6.6
+

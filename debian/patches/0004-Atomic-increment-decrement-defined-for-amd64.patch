@@ -1,0 +1,25 @@
+From e60725d1339ade0ae3fa3c6e45b2c3de2103a517 Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Mon, 9 Nov 2009 12:15:11 +0100
+Subject: Atomic increment/decrement defined for amd64
+
+---
+ sfworks/common/impl/ThreadMutex.cxx |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/sfworks/common/impl/ThreadMutex.cxx b/sfworks/common/impl/ThreadMutex.cxx
+index f6771d2..c1500ab 100644
+--- a/sfworks/common/impl/ThreadMutex.cxx
++++ b/sfworks/common/impl/ThreadMutex.cxx
+@@ -32,7 +32,7 @@
+  */
+ 
+ #if !defined(__i386__) && !defined(__sun) && \
+-    !defined(_WIN32) && !defined(__APPLE__)
++    !defined(_WIN32) && !defined(__APPLE__) && !defined(__amd64__)
+ # error Atomic increment/decrement is not defined for your architecture
+ #endif
+ 
+-- 
+1.6.6
+
