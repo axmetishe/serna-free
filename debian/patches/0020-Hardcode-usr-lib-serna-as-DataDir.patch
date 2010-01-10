@@ -1,12 +1,30 @@
-From d4f29f0d3889e9e349da429898f59947e95708fc Mon Sep 17 00:00:00 2001
+From cafd31d8d889304542fc94c7409ba839ff899b03 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 21:50:15 +0100
 Subject: Hardcode /usr/lib/serna as DataDir
 
 ---
+ serna/utils/impl/ConfigImpl.cxx   |    5 ++++-
  serna/utils/impl/config_utils.cxx |    7 +------
- 1 files changed, 1 insertions(+), 6 deletions(-)
+ 2 files changed, 5 insertions(+), 7 deletions(-)
 
+diff --git a/serna/utils/impl/ConfigImpl.cxx b/serna/utils/impl/ConfigImpl.cxx
+index 3f34e58..3d754e4 100644
+--- a/serna/utils/impl/ConfigImpl.cxx
++++ b/serna/utils/impl/ConfigImpl.cxx
+@@ -308,8 +308,11 @@ String ConfigImpl::getDataDir() const
+ {
+     if (!dataDir_.isEmpty())
+         return dataDir_;
+-    return root()->getSafeProperty(NOTR("vars/") +
++    String value = root()->getSafeProperty(NOTR("vars/") +
+         String(SERNA_DATA_DIR_PROPERTY))->getString();
++    if (!value.isEmpty()) 
++    	return value;
++    return get_data_dir();
+ }
+ 
+ 
 diff --git a/serna/utils/impl/config_utils.cxx b/serna/utils/impl/config_utils.cxx
 index 99b1eac..0314afe 100644
 --- a/serna/utils/impl/config_utils.cxx
