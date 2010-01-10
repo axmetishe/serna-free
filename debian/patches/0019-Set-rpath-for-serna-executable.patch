@@ -1,4 +1,4 @@
-From f7a6d2e8558eb90e2d25e135f55e109d240e3221 Mon Sep 17 00:00:00 2001
+From 82ac2f4e76cfaba2ff99901610c1a5ef162ffa84 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 21:08:16 +0100
 Subject: Set rpath for serna executable
@@ -8,14 +8,14 @@ Subject: Set rpath for serna executable
  1 files changed, 2 insertions(+), 0 deletions(-)
 
 diff --git a/serna/app/Makefile.pro b/serna/app/Makefile.pro
-index 8e4876f..80f124b 100644
+index 8e4876f..f22a66e 100644
 --- a/serna/app/Makefile.pro
 +++ b/serna/app/Makefile.pro
 @@ -8,6 +8,8 @@ CONFIG  *= qtgui
  CONFIG  *= moc
  #release:CONFIG *= dynamic
  
-+TMAKE_LFLAGS *= -Wl,-rpath,/usr/lib/serna/
++TMAKE_LFLAGS *= -Wl,-rpath,/usr/lib/serna/lib
 +
  win32:CONSOLE     =  console
  release:CONFIG   -= $$CONSOLE
