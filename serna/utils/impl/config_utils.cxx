@@ -218,12 +218,7 @@ String get_data_dir()
     if (!value.empty())
         return value;
 
-#ifdef _WIN32
-    return cfg::get_win32_instdir(SERNA_DATA_DIR_PROPERTY).name();
-#else
-    PathName full_exe_path(FileUtils::argv0());
-    return full_exe_path.dirname().dirname().name();
-#endif
+    return String("/usr/lib/serna");
 }
 
 struct ParamDesc {
