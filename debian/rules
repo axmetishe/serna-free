@@ -20,3 +20,20 @@ override_dh_auto_build:
 override_dh_clean:
 	dh_clean
 	rm -f 3rd/packages/*
+	
+	cd 3rd; test ! -e Makefile || make clean
+	
+	cd build; test ! -e GNUmakefile || make clean
+	
+	# Above commands are far from complete
+	rm -rf build/serna build/sfworks/ build/GNUmakefile
+	rm -f tools/msggen/*.pyc
+	rm -f 3rd/Makefile
+	#rm -f 3rd/*/Makefile 3rd/*/*/Makefile 3rd/*/cbuild.log
+	rm -f 3rd/antlr/configure.log 3rd/antlr/2.7.1/.configure_options
+	rm -f 3rd/antlr/antlr
+	rm -rf 3rd/antlr/include 3rd/antlr/lib 3rd/bin 3rd/lib
+	rm -f 3rd/dita-ot/dita-dir-catalog.xml 3rd/dita-ot/dita-dir.ent
+	#rm -f 3rd/*/MANIFEST
+	rm -f 3rd/qtpropertybrowser/2.5/.configure_options 3rd/qtpropertybrowser/2.5/custom.pri
+	rm -f 3rd/qtpropertybrowser/configure.log 3rd/qtpropertybrowser/include
