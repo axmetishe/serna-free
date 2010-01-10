@@ -1,1 +1,10 @@
 build/serna/app/pkg/opt/serna-free-*/lib /usr/lib/serna
+build/serna/app/pkg/opt/serna-free-*/ui /usr/lib/serna
+build/serna/app/pkg/opt/serna-free-*/translations /usr/lib/serna
+build/serna/app/pkg/opt/serna-free-*/examples /usr/lib/serna
+build/serna/app/pkg/opt/serna-free-*/icons /usr/lib/serna
+build/serna/app/pkg/opt/serna-free-*/plugins /usr/lib/serna
+build/serna/app/pkg/opt/serna-free-*/sapi /usr/lib/serna
+build/serna/app/pkg/opt/serna-free-*/doc /usr/lib/serna
+build/serna/app/pkg/opt/serna-free-*/xml /usr/lib/serna
+
