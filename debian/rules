@@ -29,11 +29,27 @@ override_dh_clean:
 	rm -rf build/serna build/sfworks/ build/GNUmakefile
 	rm -f tools/msggen/*.pyc
 	rm -f 3rd/Makefile
-	#rm -f 3rd/*/Makefile 3rd/*/*/Makefile 3rd/*/cbuild.log
+	rm -f 3rd/*/Makefile 3rd/*/cbuild.log
+	rm -f   3rd/antlr/2.7.1/Makefile \
+		3rd/aspell/0.50.5/Makefile \
+		3rd/dita-ot/1.4/Makefile \
+		3rd/docbook/1.68.1/Makefile \
+		3rd/doxygen/1.5.1/Makefile \
+		3rd/iconv/1.11/Makefile \
+		3rd/jdk/1.6.0/Makefile \
+		3rd/libxml/2.6.27/Makefile \
+		3rd/pyqt/4.5.4/Makefile \
+		3rd/python/2.6.2/Makefile \
+		3rd/qscintilla/2.4/Makefile \
+		3rd/qt/4.5.2/Makefile \
+		3rd/qtpropertybrowser/2.5/Makefile \
+		3rd/sip/4.8.2/Makefile \
+		3rd/xsltproc/1.1.19/Makefile
 	rm -f 3rd/antlr/configure.log 3rd/antlr/2.7.1/.configure_options
 	rm -f 3rd/antlr/antlr
 	rm -rf 3rd/antlr/include 3rd/antlr/lib 3rd/bin 3rd/lib
 	rm -f 3rd/dita-ot/dita-dir-catalog.xml 3rd/dita-ot/dita-dir.ent
-	#rm -f 3rd/*/MANIFEST
+	rm -f 3rd/pyqt/MANIFEST 3rd/python/MANIFEST
 	rm -f 3rd/qtpropertybrowser/2.5/.configure_options 3rd/qtpropertybrowser/2.5/custom.pri
 	rm -f 3rd/qtpropertybrowser/configure.log 3rd/qtpropertybrowser/include
+	rm -f serna/dist/bin/xsltproc
