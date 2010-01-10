@@ -1,14 +1,14 @@
-From 3d58cc1bb353b5f197b631da18c2f61f8d0702fe Mon Sep 17 00:00:00 2001
+From 571648447e8de2d0f7f148b263d6ee8ef67d40a7 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 15:45:09 +0100
-Subject: dash compiance: Do not use echo -e
+Subject: dash compliance: Do not use echo -e
 
 ---
  serna/app/script2.t |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
 diff --git a/serna/app/script2.t b/serna/app/script2.t
-index 6bde2c7..35d6a8d 100644
+index 6bde2c7..6945aab 100644
 --- a/serna/app/script2.t
 +++ b/serna/app/script2.t
 @@ -80,7 +80,7 @@ $(VARSCRIPT): $(srcdir)/script2.t $(SH_ENV) $(TCSH_ENV) $(SERNA_WRAPPER)
@@ -16,7 +16,7 @@ index 6bde2c7..35d6a8d 100644
  	
  $(SERNA_WRAPPER):
 -	@echo -e '\043!/bin/sh' > $@
-+	@echo '#!/bin/sh' > $@
++	@echo #$ $text = '\'#' . '!/bin/sh\' > $@';
  	@echo 'SDIR=`dirname $$0`' >> $@
  	@echo . '$${SDIR}/envserna.sh' >> $@
  	@echo exec '$${SDIR}/serna' '"$$@"' >> $@
