@@ -15,13 +15,19 @@ override_dh_auto_build:
 	
 	# Build serna
 	cd build; ./configure syspkg && make
-	
-	# Put file to install in place
-	cd build/serna/app; make .pkg_dir
 
 override_dh_auto_install:
+	mkdir -p debian/serna/usr/lib/serna
+	mkdir -p debian/inst_prefix
+	ln -sf ../serna/usr/lib/serna debian/inst_prefix/serna-free-4.2
+	make -C build/serna/app/ -f Makefile.install \
+		inst_prefix=$(CURDIR)/debian/inst_prefix
+	rm debian/inst_prefix/serna-free-4.2
+	rmdir debian/inst_prefix
+	
 	mkdir -p debian/serna/usr/bin
-	install -m755 build/serna/app/pkg/opt/serna-free-*/bin/serna.bin debian/serna/usr/bin/serna
+	mv debian/serna/usr/lib/serna/bin/serna.bin debian/serna/usr/bin/serna
+	rm -rf debian/serna/usr/lib/serna/bin
 
 override_dh_shlibdeps:
 	dh_shlibdeps -l/usr/lib/serna/lib
@@ -36,7 +42,7 @@ override_dh_clean:
 	
 	# Above commands are far from complete
 	rm -rf build/serna build/sfworks/ build/GNUmakefile
-	rm -f tools/*/*.pyc 
+	find -name \*.pyc -delete
 	rm -f 3rd/Makefile
 	rm -f 3rd/*/Makefile 3rd/*/cbuild.log
 	rm -f   3rd/antlr/2.7.1/Makefile \
