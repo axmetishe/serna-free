@@ -16,6 +16,9 @@ override_dh_auto_build:
 	# Build serna
 	cd build; ./configure syspkg && make
 
+	# Build Makefile.install
+	make -C build/serna/app/ -f GNUmakefile $(CURDIR)/build/serna/app/Makefile.install
+
 override_dh_auto_install:
 	mkdir -p debian/serna/usr/lib/serna
 	mkdir -p debian/inst_prefix
