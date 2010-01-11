@@ -3,7 +3,31 @@ Section: text
 Priority: extra
 Maintainer: Joachim Breitner <nomeata@debian.org>
 Build-Depends:
- debhelper (>= 7.0.50~)
+ debhelper (>= 7.0.50~),
+ python,
+ doxygen,
+ xsltproc,
+ bison,
+ openjdk-6-jre,
+ pkg-config,
+ qt4-qmake,
+ qt4-dev-tools,
+ sip4,
+ libqt4-assistant,
+ libx11-dev,
+ x11proto-core-dev,
+ libfreetype6-dev,
+ libxft-dev,
+ libxinerama-dev,
+ libxmu-dev,
+ libxml2-dev,
+ libxslt1-dev,
+ libqt4-dev,
+ libqscintilla2-dev,
+ python-qt4-dev,
+ pyqt4-dev-tools,
+ libaspell-dev,
+ python-sip4,
 Standards-Version: 3.8.3
 Homepage: http://www.syntext.com/products/serna-free/
 
