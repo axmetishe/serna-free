@@ -27,3 +27,5 @@
 0027-Implement-PropertyNode-set-get-Ptr-and-String-toPtr.patch
 0028-Use-set-getPtr-in-pyconsole-code.patch
 0029-Allow-using-the-system-wide-docbook-xsl-installation.patch
+0030-Use-system-wide-xsltproc-in-scripts.patch
+0031-Use-system-wide-xsltproc-in-publishing-plugin.patch
