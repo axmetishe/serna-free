@@ -36,7 +36,8 @@ override_dh_auto_install:
 	mv debian/serna/usr/lib/serna/doc/* debian/serna/usr/share/doc/serna
 	rmdir debian/serna/usr/lib/serna/doc/
 	
-	rm debian/sern/usr/lib/serna/config-template-orig.{ent,xml}
+	rm debian/serna/usr/lib/serna/config-template-orig.ent
+	rm debian/serna/usr/lib/serna/config-template-orig.xml
 
 override_dh_shlibdeps:
 	dh_shlibdeps -l/usr/lib/serna/lib
