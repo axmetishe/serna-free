@@ -28,6 +28,7 @@ Build-Depends:
  pyqt4-dev-tools,
  libaspell-dev,
  python-sip4,
+ docbook-xsl,
 Standards-Version: 3.8.3
 Homepage: http://www.syntext.com/products/serna-free/
 
@@ -38,7 +39,8 @@ Depends:
  ${misc:Depends},
  ${perl:Depends},
  ${python:Depends},
- xsltproc
+ xsltproc,
+ docbook-xsl,
 Description: Graphical XML editor
  Serna Free Open Source XML editor is an easy-to-use visual XML
  application which requires virtually no technical experience from
