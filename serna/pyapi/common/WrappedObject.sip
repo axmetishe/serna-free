@@ -16,7 +16,7 @@ public:
 %End
     int __int__();
 %MethodCode
-        sipRes = (int)sipCpp->getRep();
+        sipRes = (long int)sipCpp->getRep();
 %End
     bool operator==(const SimpleWrappedObject&) const;
     bool operator!=(const SimpleWrappedObject&) const;
