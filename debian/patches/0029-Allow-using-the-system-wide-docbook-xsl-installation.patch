@@ -1,4 +1,4 @@
-From 3c129073eda2d01ac813c8be5cc80856a11c67ca Mon Sep 17 00:00:00 2001
+From e42b11452bbc41ddd0c24bb00df3834ab9092185 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 17:47:02 +0100
 Subject: Allow using the system wide docbook-xsl installation
@@ -3114,7 +3114,7 @@ index 0000000..a23688d
 +    ChangeLog
 diff --git a/3rd/docbook/docbook-default.t b/3rd/docbook/docbook-default.t
 new file mode 100644
-index 0000000..34d8a01
+index 0000000..addf208
 --- /dev/null
 +++ b/3rd/docbook/docbook-default.t
 @@ -0,0 +1,27 @@
@@ -3136,7 +3136,7 @@ index 0000000..34d8a01
 +	write_script("$third_dir/bin/docbook2html", <<__EOF__);
 +DOCBOOK_DIR="$docbook_dir"; export DOCBOOK_DIR
 +XSLTPROC="$third_dir/bin/xsltproc"; export XSLTPROC
-+exec $third_dir/docbook/docbook2html.sh "$@"
++exec $third_dir/docbook/docbook2html.sh "\$@"
 +__EOF__
 +	write_file("$third_dir/docbook/MANIFEST", "");
 +        Project("TMAKE_TEMPLATE=");

@@ -16,7 +16,7 @@
 	write_script("$third_dir/bin/docbook2html", <<__EOF__);
 DOCBOOK_DIR="$docbook_dir"; export DOCBOOK_DIR
 XSLTPROC="$third_dir/bin/xsltproc"; export XSLTPROC
-exec $third_dir/docbook/docbook2html.sh "$@"
+exec $third_dir/docbook/docbook2html.sh "\$@"
 __EOF__
 	write_file("$third_dir/docbook/MANIFEST", "");
         Project("TMAKE_TEMPLATE=");
