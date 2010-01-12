@@ -1,4 +1,4 @@
-From e649d0f000756fb6905566d58a0dee6a78bd5301 Mon Sep 17 00:00:00 2001
+From 353b07011fd73180014e0c6b73f6de9a28852569 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 19:45:25 +0100
 Subject: Use system-wide xsltproc in scripts

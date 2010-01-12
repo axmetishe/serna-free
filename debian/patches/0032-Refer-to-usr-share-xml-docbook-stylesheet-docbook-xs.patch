@@ -1,4 +1,4 @@
-From 40be6903f22cedec504a149baef67f0fd63843c5 Mon Sep 17 00:00:00 2001
+From e36eb1c79e6a4f48c481c24b63eb09b461ccbb67 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 20:14:35 +0100
 Subject: Refer to /usr/share/xml/docbook/stylesheet/docbook-xsl in all relevant places

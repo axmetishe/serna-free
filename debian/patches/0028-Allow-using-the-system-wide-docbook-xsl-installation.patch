@@ -1,4 +1,4 @@
-From e42b11452bbc41ddd0c24bb00df3834ab9092185 Mon Sep 17 00:00:00 2001
+From ff9e9fc03c6722bc61a646201adfea4a84d0c40a Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 17:47:02 +0100
 Subject: Allow using the system wide docbook-xsl installation

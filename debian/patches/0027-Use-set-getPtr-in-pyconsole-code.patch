@@ -1,6 +1,6 @@
-From 239309fba8dd361e219b97e84f5133f7c3bfdcfd Mon Sep 17 00:00:00 2001
+From 6929810e780bd7f88adf27c79c1ecc9e4ca2413b Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
-Date: Tue, 12 Jan 2010 15:28:26 +0100
+Date: Tue, 12 Jan 2010 11:44:59 +0100
 Subject: Use set/getPtr in pyconsole code
 
 ---
@@ -22,16 +22,16 @@ index 15dcbbb..377f6c2 100644
          commandLineEdit_->setEnabled(false);
      textEdit_->clear();
 diff --git a/serna/plugins/pyplugin/pyplugin.cxx b/serna/plugins/pyplugin/pyplugin.cxx
-index ec03b8d..3a6f652 100644
+index c32376b..3a6f652 100644
 --- a/serna/plugins/pyplugin/pyplugin.cxx
 +++ b/serna/plugins/pyplugin/pyplugin.cxx
 @@ -213,10 +213,10 @@ static PyObject* init_pyclass(SernaApiBase* props, SString& className)
          DYNCALL("Py_Initialize");
          DYNCALL("PyEval_InitThreads");
          PropertyNode cfgRoot(SernaConfig::root());
--        long int pfunc = (long int)DL_SYM("PyRun_SimpleString");
+-        int pfunc = (int)DL_SYM("PyRun_SimpleString");
 -        cfgRoot.makeDescendant(PYTHON_RSS_PROP).setInt(pfunc);
--        pfunc = (long int)py_run_file;
+-        pfunc = (int)py_run_file;
 -        cfgRoot.makeDescendant(PYTHON_RSF_PROP).setInt(pfunc);
 +        void* pfunc = (void*)DL_SYM("PyRun_SimpleString");
 +        cfgRoot.makeDescendant(PYTHON_RSS_PROP).setPtr(pfunc);

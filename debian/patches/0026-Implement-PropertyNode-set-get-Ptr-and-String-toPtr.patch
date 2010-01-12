@@ -1,4 +1,4 @@
-From 98bc0b8c9f278c78a4fbfb9fc4af68c27cff5970 Mon Sep 17 00:00:00 2001
+From 653a345c527554c15a6558b244104c63065ceeb7 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 15:11:26 +0100
 Subject: Implement PropertyNode::(set|get)Ptr and String::toPtr
