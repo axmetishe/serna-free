@@ -10,7 +10,7 @@
           <title>Document opened with the Serna Docbook stylesheet.</title>
           <image href="document-opened-with-docbook-stylesheet.png" align="center" placement="break"/>
         </fig></p>
-      <p>Norman Walsh&apos;s Docbook stylesheet is located at: <filepath>sernaInstallationPath/xml/stylesheets/docbook-xsl-1.68.1</filepath>. Serna Docbook stylesheet is located at: <filepath>sernaInstallationPath/plugins/docbook/docbook-xsl-serna</filepath>.</p>
+      <p>Norman Walsh&apos;s Docbook stylesheet is located at: <filepath>/usr/share/xml/docbook/stylesheet/docbook-xsl</filepath>. Serna Docbook stylesheet is located at: <filepath>sernaInstallationPath/plugins/docbook/docbook-xsl-serna</filepath>.</p>
       <p>Serna Docbook stylesheet may be parameterized very similarly to Norman Walsh&apos;s Stylesheet (see files at <filepath>sernaInstallationPath/plugins/docbook/docbook-xsl-serna</filepath>: <codeph>parameters.xsl</codeph> and <codeph>titlepage.templates.xsl</codeph> that is generated with <codeph>titlepage.generator.xsl</codeph> from <codeph>titlepage.templates.xml</codeph>).</p>
     </section>
   </body>
