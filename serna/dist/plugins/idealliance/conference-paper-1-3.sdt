@@ -22,27 +22,27 @@
     <t:inscription>PDF (with FOP)</t:inscription>
     <t:extension>pdf</t:extension>
     <t:script>runFop</t:script>
-    <t:stylesheet>$SERNA_STYLESHEETS/docbook-xsl-1.68.1/fo/docbook.xsl</t:stylesheet>
+    <t:stylesheet>/usr/share/xml/docbook/stylesheet/docbook-xsl/fo/docbook.xsl</t:stylesheet>
   </t:publish>
   <t:publish>
     <t:name>pdfXep</t:name>
     <t:inscription>PDF (with XEP)</t:inscription>
     <t:extension>pdf</t:extension>
     <t:script>runXep</t:script>
-    <t:stylesheet>$SERNA_STYLESHEETS/docbook-xsl-1.68.1/fo/docbook.xsl</t:stylesheet>
+    <t:stylesheet>/usr/share/xml/docbook/stylesheet/docbook-xsl/fo/docbook.xsl</t:stylesheet>
   </t:publish>
   <t:publish>
     <t:name>htmlMulti</t:name>
     <t:inscription>HTML (Multiple Chunks)</t:inscription>
     <t:extension>htm</t:extension>
     <t:script>runXslt</t:script>
-    <t:stylesheet>$SERNA_STYLESHEETS/docbook-xsl-1.68.1/html/chunk.xsl</t:stylesheet>
+    <t:stylesheet>/usr/share/xml/docbook/stylesheet/docbook-xsl/html/chunk.xsl</t:stylesheet>
   </t:publish>
   <t:publish>
     <t:name>htmlSingle</t:name>
     <t:inscription>HTML (Single Chunk)</t:inscription>
     <t:extension>htm</t:extension>
     <t:script>runXslt</t:script>
-    <t:stylesheet>$SERNA_STYLESHEETS/docbook-xsl-1.68.1/html/docbook.xsl</t:stylesheet>
+    <t:stylesheet>/usr/share/xml/docbook/stylesheet/docbook-xsl/html/docbook.xsl</t:stylesheet>
   </t:publish>
 </t:document-template>

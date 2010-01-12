@@ -3,9 +3,9 @@
 		version="1.0"
                 exclude-result-prefixes="exsl">
 
-<xsl:import href="docbook-xsl-1.68.1/html/docbook.xsl"/>
+<xsl:import href="/usr/share/xml/docbook/stylesheet/docbook-xsl/html/docbook.xsl"/>
 <xsl:import href="chunk-common.xsl"/>
-<xsl:include href="docbook-xsl-1.68.1/html/manifest.xsl"/>
+<xsl:include href="/usr/share/xml/docbook/stylesheet/docbook-xsl/html/manifest.xsl"/>
 
 <xsl:param name="onechunk" select="0"/>
 <xsl:param name="refentry.separator" select="0"/>
