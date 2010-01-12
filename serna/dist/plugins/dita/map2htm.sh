@@ -4,7 +4,7 @@ if [[ "$OSTYPE" = darwin* ]]
 then
 $SERNA_DATA_DIR/MacOS/xsltproc --xinclude --param "FILEREF" "''" -o "$3" "$2" "$1"
 else
-$SERNA_DATA_DIR/bin/xsltproc --xinclude --param "FILEREF" "''" -o "$3" "$2" "$1"
+xsltproc --xinclude --param "FILEREF" "''" -o "$3" "$2" "$1"
 fi
 
 
