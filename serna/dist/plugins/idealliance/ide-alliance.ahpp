@@ -1,5 +1,5 @@
   <output-type>
     <pdf>
-      <stylesheet>$SERNA_STYLESHEETS/docbook-xsl-1.68.1/fo/docbook.xsl</stylesheet>
+      <stylesheet>/usr/share/xml/docbook/stylesheet/docbook-xsl/fo/docbook.xsl</stylesheet>
     </pdf>
   </output-type>
