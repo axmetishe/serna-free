@@ -83,14 +83,7 @@ class IDEAlliancePublisherCreator(SimplePublisherCreator):
                 args.stylesheet = os.path.normpath(self.pluginDir + \
                                                    '/gca/gca-xsl-serna/gca.xsl')
             else:
-                xslPropName = r'$SERNA_STYLESHEETS'
-                dbDir = unicode(SernaConfig.resolveResource('', xslPropName, ''))
-                if not os.path.exists(dbDir):
-                    dataDir = os.environ.get(r'SERNA_DATA_DIR', None)
-                    if dataDir:
-                        dbDir = os.path.join(dbDir, 'xml', 'stylesheets')
-
-                dbDir = os.path.join(dbDir, 'docbook-xsl-1.68.1')
+                dbDir = "/usr/share/xml/docbook/stylesheet/docbook-xsl"
 
                 args.stylesheet = os.path.normpath(dbDir + '/fo/docbook.xsl')
                 args.singleXsl = os.path.normpath(dbDir + '/html/docbook.xsl')

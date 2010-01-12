@@ -4296,7 +4296,7 @@
       <title>Docbook Stylesheet</title>
       <body>
         <section>
-          <p>The stylesheet is located at <codeph>sernaInstallationPath/xml/stylesheets/docbook-xsl-1.68.1</codeph>.</p>
+          <p>The stylesheet is located at <codeph>/usr/share/xml/docbook/stylesheet/docbook-xsl</codeph>.</p>
           <p>Docbook is the most popular DTD for technical documentation. The Serna package includes  the Docbook XSL Stylesheet, which renders documents as closely as possible to <xref href="http://sourceforge.net/projects/docbook/" format="html">Norman Walsh&apos;s Docbook stylesheet</xref>.</p>
           <p>The Serna Docbook stylesheet is based on the Norman Walsh stylesheet and modified in order to provide convenient WYSIWYG editing and optimal performance for dynamic execution.</p>
           <p>It may be parameterized very similarly to Norman Walsh&apos;s Stylesheet (see files <codeph>parameters.xsl</codeph> and <codeph>titlepage.templates.xsl</codeph>, that is generated with <codeph>titlepage.generator.xsl</codeph> from <codeph>titlepage.templates.xml</codeph>).</p>
