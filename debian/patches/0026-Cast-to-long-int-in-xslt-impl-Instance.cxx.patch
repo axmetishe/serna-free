@@ -1,0 +1,25 @@
+From 71f5234ee6abcdc4133687515a1e89408a14d35f Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Tue, 12 Jan 2010 11:45:37 +0100
+Subject: Cast to (long int) in xslt/impl/Instance.cxx
+
+---
+ sfworks/xslt/impl/Instance.cxx |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/sfworks/xslt/impl/Instance.cxx b/sfworks/xslt/impl/Instance.cxx
+index 4f04fb4..ac47f94 100644
+--- a/sfworks/xslt/impl/Instance.cxx
++++ b/sfworks/xslt/impl/Instance.cxx
+@@ -343,7 +343,7 @@ void Instance::dump() const
+         << " PS:" << prevSibling() << " NS:" << nextSibling()
+         << " R" << getRefCnt() << " S#:" << siblingIndex_
+         << " ctx "<< nsiContext().node()
+-        << "/<" << (((int)nsiContext().node() > 0x1000000) ?
++        << "/<" << (((long int)nsiContext().node() > 0x1000000) ?
+             nsiContext().node()->nodeName() : String("*BAD*"))
+         << ">" << std::endl;
+     for (const Instance* i = firstChild(); i; i = i->nextSibling()) {
+-- 
+1.6.6
+

@@ -5,7 +5,7 @@
 0005-Fix-som-bison-errors.patch
 0006-Work-around-including-two-bison-parsers-in-Tokenizer.patch
 0007-Enable-SIP_FEATURE_TYPE_STRUCT.patch
-0008-Casts-to-long-int-instead-of-int.patch
+0008-Use-void-when-debug-outputting-a-pointer.patch
 0009-Fix-aspell.hpp-import-why-did-it-not-work.patch
 0010-libsp-adjustments-for-64-bits.patch
 0011-In-find_package_by_files-return-undef-upon-failure.patch
@@ -18,3 +18,9 @@
 0018-dash-compliance-Do-not-use-echo-e.patch
 0019-Set-rpath-for-serna-executable.patch
 0020-Hardcode-usr-lib-serna-as-DataDir.patch
+0021-Cast-to-intptr_t-in-Dav-DavManager-lock-calls.patch
+0022-Cast-to-long-int-in-String-number-calls.patch
+0023-Cast-to-long-int-in-sip-stuff.patch
+0024-Cast-to-long-int-in-pyplugin-stuff.patch
+0025-Cast-to-long-int-in-PackedPtrSet.h.patch
+0026-Cast-to-long-int-in-xslt-impl-Instance.cxx.patch

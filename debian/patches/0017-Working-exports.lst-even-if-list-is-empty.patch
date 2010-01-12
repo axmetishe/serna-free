@@ -1,4 +1,4 @@
-From 3133a67003aefd34eb6a6a4ff098fad084385e44 Mon Sep 17 00:00:00 2001
+From ad38098372a3841b55e2a51b70e2a857db7072b2 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 13:38:29 +0100
 Subject: Working exports.lst even if list is empty

@@ -1,4 +1,4 @@
-From ecd21f3122796998d39aaac87b4b99b67e08804f Mon Sep 17 00:00:00 2001
+From 4a54386586d70e235380ceb3cfb922c6e9366bd3 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 13:01:30 +0100
 Subject: Add patches to make antlr compile

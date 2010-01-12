@@ -1,0 +1,28 @@
+From 9b062aad930028909dd743570c701eab2efdac01 Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Tue, 12 Jan 2010 11:44:59 +0100
+Subject: Cast to (long int) in pyplugin stuff
+
+---
+ serna/plugins/pyplugin/pyplugin.cxx |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/serna/plugins/pyplugin/pyplugin.cxx b/serna/plugins/pyplugin/pyplugin.cxx
+index c32376b..ec03b8d 100644
+--- a/serna/plugins/pyplugin/pyplugin.cxx
++++ b/serna/plugins/pyplugin/pyplugin.cxx
+@@ -213,9 +213,9 @@ static PyObject* init_pyclass(SernaApiBase* props, SString& className)
+         DYNCALL("Py_Initialize");
+         DYNCALL("PyEval_InitThreads");
+         PropertyNode cfgRoot(SernaConfig::root());
+-        int pfunc = (int)DL_SYM("PyRun_SimpleString");
++        long int pfunc = (long int)DL_SYM("PyRun_SimpleString");
+         cfgRoot.makeDescendant(PYTHON_RSS_PROP).setInt(pfunc);
+-        pfunc = (int)py_run_file;
++        pfunc = (long int)py_run_file;
+         cfgRoot.makeDescendant(PYTHON_RSF_PROP).setInt(pfunc);
+         SString plugins_bin_dir = SernaConfig::getProperty("vars/plugins_bin");
+         SString data_dir = SernaConfig::getProperty("vars/data_dir");
+-- 
+1.6.6
+

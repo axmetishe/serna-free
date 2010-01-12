@@ -1,4 +1,4 @@
-From a92259e13ef78490b3a22f5201f52cc322cc398b Mon Sep 17 00:00:00 2001
+From 22838c390466b14f67e7694c2b9e7d92e6c26fd3 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 13:07:03 +0100
 Subject: Add imports of stdio.h
@@ -12,7 +12,7 @@ Subject: Add imports of stdio.h
  5 files changed, 10 insertions(+), 0 deletions(-)
 
 diff --git a/sfworks/grove/impl/EntityDecl.cxx b/sfworks/grove/impl/EntityDecl.cxx
-index ba537ca..9c26c7d 100644
+index ca571c7..3aef246 100644
 --- a/sfworks/grove/impl/EntityDecl.cxx
 +++ b/sfworks/grove/impl/EntityDecl.cxx
 @@ -39,6 +39,8 @@

@@ -1,4 +1,4 @@
-From ae4ddaf8cb58ea17208fec88b28746eff7f6fea2 Mon Sep 17 00:00:00 2001
+From a486eafadc1ee97289b5bc63efc0f82b4a1369d9 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 10 Nov 2009 15:14:11 +0100
 Subject: Fix aspell.hpp import (why did it not work?)
