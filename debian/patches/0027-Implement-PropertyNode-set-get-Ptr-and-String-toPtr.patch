@@ -1,0 +1,172 @@
+From 98bc0b8c9f278c78a4fbfb9fc4af68c27cff5970 Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Tue, 12 Jan 2010 15:11:26 +0100
+Subject: Implement PropertyNode::(set|get)Ptr and String::toPtr
+
+This treads the pointer as a number, but never casts to int so no
+precision is lost. Inside the String methods, casts to and from intptr_t
+are made.
+---
+ serna/sapi/common/PropertyNode.h        |    6 ++++++
+ serna/sapi/common/impl/PropertyNode.cxx |   14 ++++++++++++++
+ sfworks/common/PropertyTree.h           |    2 ++
+ sfworks/common/String.h                 |    2 ++
+ sfworks/common/impl/PropertyTree.cxx    |   10 ++++++++++
+ sfworks/common/impl/String.cxx          |   10 ++++++++++
+ 6 files changed, 44 insertions(+), 0 deletions(-)
+
+diff --git a/serna/sapi/common/PropertyNode.h b/serna/sapi/common/PropertyNode.h
+index 4b1a92f..533dcaf 100644
+--- a/serna/sapi/common/PropertyNode.h
++++ b/serna/sapi/common/PropertyNode.h
+@@ -72,6 +72,9 @@ public:
+     /// Get integer property value
+     int             getInt(bool* ok = 0) const;
+ 
++    /// Get pointer property value
++    void*           getPtr(bool* ok = 0) const;
++
+     /// Get double property value
+     double          getDouble(bool* ok = 0) const;
+ 
+@@ -84,6 +87,9 @@ public:
+     /// Set integer value of property
+     void            setInt(int);
+ 
++    /// Set pointer value of property
++    void            setPtr(void*);
++
+     /// Set double value of property
+     void            setDouble(double);
+ 
+diff --git a/serna/sapi/common/impl/PropertyNode.cxx b/serna/sapi/common/impl/PropertyNode.cxx
+index 922b7fb..5cd33c1 100644
+--- a/serna/sapi/common/impl/PropertyNode.cxx
++++ b/serna/sapi/common/impl/PropertyNode.cxx
+@@ -174,6 +174,13 @@ int PropertyNode::getInt(bool* ok) const
+     return MY_IMPL->getInt(ok);
+ }
+ 
++void* PropertyNode::getPtr(bool* ok) const
++{
++    if (isNull())
++        return 0;
++    return MY_IMPL->getPtr(ok);
++}
++
+ double PropertyNode::getDouble(bool* ok) const
+ {
+     if (isNull())
+@@ -198,6 +205,13 @@ void PropertyNode::setInt(int v)
+     if (getRep())
+         MY_IMPL->setInt(v);
+ }
++
++void PropertyNode::setPtr(void* v)
++{
++    if (getRep())
++        MY_IMPL->setPtr(v);
++}
++
+ void PropertyNode::setDouble(double v)
+ {
+     if (getRep())
+diff --git a/sfworks/common/PropertyTree.h b/sfworks/common/PropertyTree.h
+index d76a7c1..ea299b7 100644
+--- a/sfworks/common/PropertyTree.h
++++ b/sfworks/common/PropertyTree.h
+@@ -102,6 +102,7 @@ public:
+     /// Get value of this node
+     bool                    getBool(bool* ok = 0) const;
+     int                     getInt(bool* ok = 0) const;
++    void*                   getPtr(bool* ok = 0) const;
+     double                  getDouble(bool* ok = 0) const;
+     const String&           getString(bool* ok = 0) const;
+ 
+@@ -115,6 +116,7 @@ public:
+     /// Set value of this node
+     void                    setBool(bool);
+     void                    setInt(int);
++    void                    setPtr(void*);
+     void                    setDouble(double);
+     void                    setString(const String&);
+ 
+diff --git a/sfworks/common/String.h b/sfworks/common/String.h
+index 4d39f42..cff2542 100644
+--- a/sfworks/common/String.h
++++ b/sfworks/common/String.h
+@@ -164,6 +164,7 @@ public:
+     int toInt (bool *ok = 0, int base = 10) const;
+     unsigned int toUInt (bool *ok = 0, int base = 10) const;
+     long toLong (bool *ok = 0, int base = 10) const;
++    void* toPtr(bool *ok = 0, int base = 10) const;
+     unsigned long toULong (bool *ok = 0, int base = 10) const;
+     float toFloat (bool *ok = 0) const;
+     double toDouble(bool *ok = 0) const;
+@@ -183,6 +184,7 @@ public:
+     static String number(unsigned long, int base = 10);
+     static String number(int, int base = 10);
+     static String number(size_type, int base = 10);
++    static String number(void*, int base = 10);
+     static String number(double, char f = 'g', int prec = 6);
+ 
+     static int compare(const String& s1, const String& s2);
+diff --git a/sfworks/common/impl/PropertyTree.cxx b/sfworks/common/impl/PropertyTree.cxx
+index dc11338..86c6919 100644
+--- a/sfworks/common/impl/PropertyTree.cxx
++++ b/sfworks/common/impl/PropertyTree.cxx
+@@ -323,6 +323,11 @@ int PropertyNode::getInt(bool* ok) const
+     return value_.toInt(ok);
+ }
+ 
++void* PropertyNode::getPtr(bool* ok) const
++{
++    return value_.toPtr(ok);
++}
++
+ double PropertyNode::getDouble(bool* ok) const
+ {
+     return value_.toDouble(ok);
+@@ -352,6 +357,11 @@ void PropertyNode::setInt(int v)
+     setString(String::number(v));
+ }
+ 
++void PropertyNode::setPtr(void * v)
++{
++    setString(String::number(v));
++}
++
+ void PropertyNode::setString(const String& sv)
+ {
+     if (value_ == sv)
+diff --git a/sfworks/common/impl/String.cxx b/sfworks/common/impl/String.cxx
+index 4544e6d..07baa13 100644
+--- a/sfworks/common/impl/String.cxx
++++ b/sfworks/common/impl/String.cxx
+@@ -274,6 +274,11 @@ int String::toInt (bool *ok, int base) const
+     return to_number<int>(*this, base, ok);
+ }
+ 
++void *String::toPtr (bool *ok, int base) const
++{
++    return (void *)to_number<intptr_t>(*this, base, ok);
++}
++
+ unsigned int String::toUInt (bool *ok, int base) const
+ {
+     return to_number<unsigned>(*this, base, ok);
+@@ -332,6 +337,11 @@ String String::number(int i, int base)
+     return from_number<String>(i, unsigned(base));
+ }
+ 
++String String::number(void* i, int base)
++{
++    return from_number<String>((intptr_t)i, unsigned(base));
++}
++
+ String String::number(unsigned int i, int base)
+ {
+     return from_number<String>(i, unsigned(base));
+-- 
+1.6.6
+

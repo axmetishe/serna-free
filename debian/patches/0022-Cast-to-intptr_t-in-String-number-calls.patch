@@ -1,7 +1,7 @@
-From 7234d7e43bbaf3af3031f3c4ccf3359eeba55c9e Mon Sep 17 00:00:00 2001
+From 5f6d866f4ab01557511b7d5c919dd39bd7df8deb Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:43:55 +0100
-Subject: Cast to (long int) in String::number calls
+Subject: Cast to (intptr_t) in String::number calls
 
 ---
  sfworks/grove/impl/EntityDecl.cxx |    2 +-
@@ -10,7 +10,7 @@ Subject: Cast to (long int) in String::number calls
  3 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/sfworks/grove/impl/EntityDecl.cxx b/sfworks/grove/impl/EntityDecl.cxx
-index 3aef246..9c26c7d 100644
+index 3aef246..ad03d30 100644
 --- a/sfworks/grove/impl/EntityDecl.cxx
 +++ b/sfworks/grove/impl/EntityDecl.cxx
 @@ -407,7 +407,7 @@ XincludeDecl::XincludeDecl()
@@ -18,12 +18,12 @@ index 3aef246..9c26c7d 100644
      declType_ = xinclude;
      dataType_ = sgml;
 -    setName("XI:" + String::number((int)this));
-+    setName("XI:" + String::number((long int)this));
++    setName("XI:" + String::number((intptr_t)this));
  }
  
  String XincludeDecl::asAnnotationString() const
 diff --git a/sfworks/xs/XsDataImpl.cxx b/sfworks/xs/XsDataImpl.cxx
-index 3c6ab12..e11edaf 100644
+index 3c6ab12..4b62f5a 100644
 --- a/sfworks/xs/XsDataImpl.cxx
 +++ b/sfworks/xs/XsDataImpl.cxx
 @@ -221,7 +221,7 @@ const String& XsDataImpl::targetNsUri() const
@@ -31,12 +31,12 @@ index 3c6ab12..e11edaf 100644
  {
      if (pvt)
 -        return NcnCred(name, "pns" + String::number((uint)this));
-+        return NcnCred(name, "pns" + String::number((unsigned long int)this));
++        return NcnCred(name, "pns" + String::number((intptr_t)this));
      return NcnCred(name, targetNs_);
  }
  
 diff --git a/sfworks/xslt/impl/functions3.cxx b/sfworks/xslt/impl/functions3.cxx
-index 30bcfff..df2b6c6 100644
+index 30bcfff..78442b4 100644
 --- a/sfworks/xslt/impl/functions3.cxx
 +++ b/sfworks/xslt/impl/functions3.cxx
 @@ -158,7 +158,7 @@ FunctionExprImpl<XsltFunctionId::GenerateId>::eval(const Xpath::NodeSetItem& nsi
@@ -44,7 +44,7 @@ index 30bcfff..df2b6c6 100644
          throw Xslt::Exception(XsltMessages::xpathEvalArgs,
                                ei.exprContext().contextString());
 -    return new Xpath::StringValue("X" + String::number((uint)n, 16));
-+    return new Xpath::StringValue("X" + String::number((unsigned long int)n, 16));
++    return new Xpath::StringValue("X" + String::number((intptr_t)n, 16));
  }
  
  ///////////////////////////////////////////////////////////////

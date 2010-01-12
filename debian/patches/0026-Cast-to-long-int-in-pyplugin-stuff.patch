@@ -1,4 +1,4 @@
-From 9b062aad930028909dd743570c701eab2efdac01 Mon Sep 17 00:00:00 2001
+From 77327c5303296bcc3031d271a263e0f38de3d48c Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:44:59 +0100
 Subject: Cast to (long int) in pyplugin stuff

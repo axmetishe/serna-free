@@ -1,4 +1,4 @@
-From 2998d8616e427033c2d9512fea4be8c3b1df3090 Mon Sep 17 00:00:00 2001
+From e300761961a61e2ff555c8c53a26510dbc176b3a Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 21:08:16 +0100
 Subject: Set rpath for serna executable

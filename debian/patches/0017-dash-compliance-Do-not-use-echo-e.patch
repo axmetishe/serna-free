@@ -1,4 +1,4 @@
-From e2623ac2533c0157417510ef712e7b5d6cb0fe90 Mon Sep 17 00:00:00 2001
+From 91cf9832bd0c3afa101e6860906e6996a181fb23 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 15:45:09 +0100
 Subject: dash compliance: Do not use echo -e

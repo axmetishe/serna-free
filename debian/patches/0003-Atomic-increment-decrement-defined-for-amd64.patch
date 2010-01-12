@@ -1,4 +1,4 @@
-From e60725d1339ade0ae3fa3c6e45b2c3de2103a517 Mon Sep 17 00:00:00 2001
+From 3fdc36ca41586bfb6504152e70cda6e08de20ca2 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Mon, 9 Nov 2009 12:15:11 +0100
 Subject: Atomic increment/decrement defined for amd64

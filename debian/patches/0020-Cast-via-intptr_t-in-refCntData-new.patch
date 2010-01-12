@@ -1,0 +1,25 @@
+From f7541883f9c7f597d7934b32f8449dbf2e1ee5be Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Tue, 12 Jan 2010 14:46:59 +0100
+Subject: Cast via intptr_t in refCntData::new
+
+---
+ sfworks/common/RefCntStorage.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/sfworks/common/RefCntStorage.h b/sfworks/common/RefCntStorage.h
+index bcc7fbb..8a0f281 100644
+--- a/sfworks/common/RefCntStorage.h
++++ b/sfworks/common/RefCntStorage.h
+@@ -70,7 +70,7 @@ template<typename E> struct RefCntData : public COMMON_NS::RefCounted<> {
+     void* operator new(std::size_t, size_type capacity)
+     {
+         // 1 used below to silence g++ which gives a lengthy warning
+-        const size_type buf_offset((size_type)&((RefCntData*)1)->buf_ - 1);
++        const size_type buf_offset((size_type)(intptr_t)&((RefCntData*)1)->buf_ - 1);
+         return ::operator new(buf_offset + capacity * sizeof(E));
+     }
+     void operator delete(void* p, size_type)
+-- 
+1.6.6
+

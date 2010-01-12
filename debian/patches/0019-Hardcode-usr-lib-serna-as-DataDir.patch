@@ -1,4 +1,4 @@
-From 3d03316e83481a9c76d9a0f3f0ea69790c371986 Mon Sep 17 00:00:00 2001
+From 272e5ea27ad97593ca9b82c886aa377b1fb3612d Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 21:50:15 +0100
 Subject: Hardcode /usr/lib/serna as DataDir

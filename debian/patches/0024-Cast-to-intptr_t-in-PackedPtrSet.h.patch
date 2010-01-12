@@ -1,14 +1,16 @@
-From 821275c37df7bb42c9c29b9adad732c527bb048b Mon Sep 17 00:00:00 2001
+From cc157ca5e6f6a83b3f463324bf6c84a7251c7859 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:45:16 +0100
-Subject: Cast to (long int) in PackedPtrSet.h
+Subject: Cast to (intptr_t) in PackedPtrSet.h
 
+The check was (((int)(*vp)) & 01), now (((intptr_t)(*vp)) & 01). Should
+be safe.
 ---
  sfworks/common/PackedPtrSet.h |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
 diff --git a/sfworks/common/PackedPtrSet.h b/sfworks/common/PackedPtrSet.h
-index 4687fbf..1326790 100644
+index 4687fbf..2b048ee 100644
 --- a/sfworks/common/PackedPtrSet.h
 +++ b/sfworks/common/PackedPtrSet.h
 @@ -76,7 +76,7 @@ public:
@@ -16,7 +18,7 @@ index 4687fbf..1326790 100644
              if (*vp == p)
                  return false;
 -            if (((int)(*vp)) & 01) {
-+            if (((long int)(*vp)) & 01) {
++            if (((intptr_t)(*vp)) & 01) {
                  *vp = p;
                  return true;
              }

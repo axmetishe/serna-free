@@ -1,4 +1,4 @@
-From bb640fa06b41128cef2682826971064d4318b928 Mon Sep 17 00:00:00 2001
+From 6e75c018292632878718b3aae530e4c0501f6dc3 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 10 Nov 2009 10:24:42 +0100
 Subject: Work around including two bison parsers in Tokenizer.cxx

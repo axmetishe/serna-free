@@ -1,4 +1,4 @@
-From 22838c390466b14f67e7694c2b9e7d92e6c26fd3 Mon Sep 17 00:00:00 2001
+From 482b2135b6ded4fc5e35ba9933e5b8a5ef569afc Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 13:07:03 +0100
 Subject: Add imports of stdio.h

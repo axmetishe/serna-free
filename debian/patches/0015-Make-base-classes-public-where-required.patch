@@ -1,4 +1,4 @@
-From 012f908592136cab6e5c359136b41453b29f9575 Mon Sep 17 00:00:00 2001
+From bf83777d26d03fec47720d558c1307348f66f228 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 13:29:50 +0100
 Subject: Make base classes public where required
