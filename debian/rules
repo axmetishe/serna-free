@@ -21,20 +21,19 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	mkdir -p debian/serna/usr/lib/serna
+	mkdir -p debian/serna/usr/share/doc/serna
 	mkdir -p debian/inst_prefix
-	ln -sf ../serna/usr/lib/serna debian/inst_prefix/serna-free-4.2
+	ln -sf $(CURDIR)/debian/serna/usr/lib/serna debian/inst_prefix/serna-free-4.2
+	ln -sf $(CURDIR)/debian/serna/usr/share/doc/serna debian/serna/usr/lib/serna/doc
 	make -C build/serna/app/ -f Makefile.install \
 		inst_prefix=$(CURDIR)/debian/inst_prefix
 	rm debian/inst_prefix/serna-free-4.2
+	rm debian/serna/usr/lib/serna/doc
 	rmdir debian/inst_prefix
 	
 	mkdir -p debian/serna/usr/bin
 	mv debian/serna/usr/lib/serna/bin/serna.bin debian/serna/usr/bin/serna
 	rm -rf debian/serna/usr/lib/serna/bin
-	
-	mkdir -p debian/serna/usr/share/doc/serna
-	mv debian/serna/usr/lib/serna/doc/* debian/serna/usr/share/doc/serna
-	rmdir debian/serna/usr/lib/serna/doc/
 	
 	rm debian/serna/usr/lib/serna/config-template-orig.ent
 	rm debian/serna/usr/lib/serna/config-template-orig.xml
