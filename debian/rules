@@ -35,8 +35,19 @@ override_dh_auto_install:
 	mv debian/serna/usr/lib/serna/bin/serna.bin debian/serna/usr/bin/serna
 	rm -rf debian/serna/usr/lib/serna/bin
 	
+	# Remove unneeded and unwanted files
 	rm debian/serna/usr/lib/serna/config-template-orig.ent
 	rm debian/serna/usr/lib/serna/config-template-orig.xml
+	rm debian/serna/usr/lib/serna/LICENSE.GPL
+	rm debian/serna/usr/lib/serna/SP-COPYING
+	rm debian/serna/usr/lib/serna/plugins/dita/DITA-OT1.4/license.txt
+	rm debian/serna/usr/lib/serna/plugins/speller/ASPELL-COPYING
+	rm debian/serna/usr/lib/serna/plugins/speller/ASPELL-EN-COPYING
+	rm debian/serna/usr/lib/serna/plugins/tei/tei-xsl-serna/SR-COPYING
+	rm debian/serna/usr/lib/serna/plugins/docbook/docbook-xsl-serna/NW-COPYING
+	rm debian/serna/usr/lib/serna/plugins/dita/DITA-OT1.4/tools/ant/LICENSE.dom
+	rm debian/serna/usr/lib/serna/plugins/dita/DITA-OT1.4/tools/ant/LICENSE.sax
+	rm debian/serna/usr/lib/serna/plugins/dita/DITA-OT1.4/tools/ant/LICENSE.xerces
 
 override_dh_shlibdeps:
 	dh_shlibdeps -l/usr/lib/serna/lib
