@@ -13,7 +13,7 @@
 <!DOCTYPE serna-config [
    <!ENTITY config SYSTEM "config-template.ent">
    <!ENTITY data-path "$DATA_DIR">
-   <!ENTITY doc-path "$DATA_DIR/doc">
+   <!ENTITY doc-path "/usr/share/doc/serna">
    <!ENTITY dita-ot-path "$DATA_DIR/plugins/dita/DITA-OT1.4">
    <!ENTITY dita-ot-samples-path "plugins/dita/DITA-OT1.4/samples/hierarchy.ditamap">
    <!ENTITY translations-path "$DATA_DIR/translations">
