@@ -29,3 +29,5 @@
 0029-Allow-using-the-system-wide-docbook-xsl-installation.patch
 0030-Use-system-wide-xsltproc-in-scripts.patch
 0031-Use-system-wide-xsltproc-in-publishing-plugin.patch
+0032-Refer-to-usr-share-doc-serna-in-config-template.patch
+0033-Refer-to-usr-share-xml-docbook-stylesheet-docbook-xs.patch

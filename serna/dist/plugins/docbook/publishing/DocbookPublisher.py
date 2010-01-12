@@ -64,7 +64,7 @@ class DocbookPublisherCreator(SimplePublisherCreator):
             if dataDir:
                 xslDir = os.path.join(dataDir, 'xml', 'stylesheets')
 
-        xslDir = os.path.join(xslDir, 'docbook-xsl-1.68.1')
+        xslDir = "/usr/share/xml/docbook/stylesheet/docbook-xsl"
 
         self.xslFoScript = os.path.join(xslDir, 'fo', 'docbook.xsl')
         self.singleXsl = os.path.join(xslDir, 'html', 'docbook.xsl')
