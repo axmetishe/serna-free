@@ -33,7 +33,12 @@ Homepage: http://www.syntext.com/products/serna-free/
 
 Package: serna
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ${perl:Depends},
+ ${python:Depends},
+ xsltproc
 Description: Graphical XML editor
  Serna Free Open Source XML editor is an easy-to-use visual XML
  application which requires virtually no technical experience from
