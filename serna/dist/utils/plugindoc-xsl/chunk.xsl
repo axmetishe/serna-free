@@ -3,7 +3,7 @@
 		version="1.0"
                 exclude-result-prefixes="exsl">
 
-<xsl:import href="../../xml/stylesheets/docbook-xsl-1.68.1/html/docbook.xsl"/>
+<xsl:import href="/usr/share/xml/docbook/stylesheet/docbook-xsl/html/docbook.xsl"/>
 <xsl:import href="chunk-common.xsl"/>
 
 <xsl:param name="onechunk" select="0"/>
