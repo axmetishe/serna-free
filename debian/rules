@@ -88,3 +88,6 @@ override_dh_clean:
 	rm -f 3rd/qtpropertybrowser/2.5/.configure_options 3rd/qtpropertybrowser/2.5/custom.pri
 	rm -f 3rd/qtpropertybrowser/configure.log 3rd/qtpropertybrowser/include
 	rm -f serna/dist/bin/xsltproc
+
+override_dh_makeshlibs:
+	# We do not have any public shared libraries
