@@ -53,16 +53,4 @@ def get_simple_options(publisher, widget, props=["script", "stylesheet"]):
             publisher[prop] = dlg.getProperty(prop)
 
 def get_xsltproc():
-    sernaDataDir = unicode(SernaConfig.getProperty('vars/data_dir'))
-    if not sernaDataDir:
-        sernaDataDir = os.environ.get('SERNA_DATA_DIR', None)
-        if not sernaDataDir:
-            return 'xsltproc'
-
-    bindir = "bin"
-    if "darwin" == sys.platform:
-        bindir = "MacOS"
-        
-    xsltproc = os.path.join(sernaDataDir, bindir, "xsltproc")
-    
-    return find_script(xsltproc)
+    return 'xsltproc'
