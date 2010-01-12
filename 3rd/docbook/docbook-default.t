@@ -18,7 +18,10 @@ DOCBOOK_DIR="$docbook_dir"; export DOCBOOK_DIR
 XSLTPROC="$third_dir/bin/xsltproc"; export XSLTPROC
 exec $third_dir/docbook/docbook2html.sh "$@"
 __EOF__
+	write_file("$third_dir/docbook/MANIFEST", "");
         Project("TMAKE_TEMPLATE=");
         return;
     }
+
+    write_file("$third_dir/docbook/MANIFEST", "include:MANIFEST.docbook");
 #$}
