@@ -31,3 +31,4 @@
 0031-Refer-to-usr-share-doc-serna-in-config-template.patch
 0032-Refer-to-usr-share-xml-docbook-stylesheet-docbook-xs.patch
 0033-Fix-Syntax-error-Unterminated-quoted-string.patch
+0034-Do-not-clean-3rd-qt-icons.patch
