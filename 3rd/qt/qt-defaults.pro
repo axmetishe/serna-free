@@ -87,4 +87,4 @@ CLEANFILES += $(top_srcdir)/MANIFEST $(top_srcdir)/q3porting.xml
 unix:CLEANFILES += $(top_srcdir)/translations
 win32:CLEANDIRS = $(top_srcdir)/translations
 
-CLEANDIRS += $(top_srcdir)/icons $(top_srcdir)/include $(top_srcdir)/plugins
+CLEANDIRS += $(top_srcdir)/include $(top_srcdir)/plugins
