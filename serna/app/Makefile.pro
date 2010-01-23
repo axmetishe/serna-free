@@ -83,9 +83,11 @@ USE     =   \
             QtXml \
             QtNetwork \
             QtSvg \
+            QtSql \
             QtAssistantClient \
             sp \
             qtpropertybrowser \
+            qtsingleapplication \
             qscintilla \
             antlr
 

@@ -1,4 +1,4 @@
-From f7541883f9c7f597d7934b32f8449dbf2e1ee5be Mon Sep 17 00:00:00 2001
+From c940fba08b03918a85043c4b30cc7088bcc4e156 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 14:46:59 +0100
 Subject: Cast via intptr_t in refCntData::new

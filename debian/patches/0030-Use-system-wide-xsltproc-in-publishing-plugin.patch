@@ -1,4 +1,4 @@
-From d2856179c48e4c68fcece6dc55079aa5c48a9c97 Mon Sep 17 00:00:00 2001
+From c4a54163d8f602606bf5f08f82cf73740e432777 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 20:00:41 +0100
 Subject: Use system-wide xsltproc in publishing plugin

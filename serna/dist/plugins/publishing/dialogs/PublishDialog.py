@@ -62,7 +62,7 @@ class PublishDialog(Ui_PublishDialog, DialogBase):
         tags.sort()
         for tag in tags:
             self.outputTypeCombo_.addItem(tag)
-            
+
     def _getSrcPath(self):
         sernaDoc = self._plugin.sernaDoc()
         dsi = sernaDoc.getDsi()
@@ -106,11 +106,19 @@ class PublishDialog(Ui_PublishDialog, DialogBase):
         elif not ext.startswith('.'):
             ext = '.' + ext
         filepath = u"%s%s" % (name, ext)
+        if not os.access(os.path.dirname(filepath), os.W_OK):
+            fname = os.path.basename(name)
+            home_path = os.environ.get('HOME')
+            filepath = os.path.join(home_path, unicode(fname))
+            filepath += ext
         if os.path.exists(filepath):
             os.unlink(filepath)
         return filepath
 
-    def setOutputFilePath(self):
+    def setOutputFilePath(self, path=None):
+        if path:
+            self.outputFileEdit_.setText(path)
+            return
         self.outputFileEdit_.setText(self._makeOutputFilePath())
 
     def publishComplete(self, exitCode, crashed):
@@ -162,7 +170,9 @@ class PublishDialog(Ui_PublishDialog, DialogBase):
             filters.append(extFilter)
         filters.append(u"All Files (*)")
 
-        outputFile = self._makeOutputFilePath()
+        outputFile = self.outputFileEdit_.text()
+        if not outputFile:
+            outputFile = self._makeOutputFilePath()
         outputFile = QFileDialog.getSaveFileName(self,
                                                  "Choose output file",
                                                  outputFile,

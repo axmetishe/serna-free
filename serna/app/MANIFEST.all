@@ -121,7 +121,7 @@ programs:${inst_prefix}/${serna}/plugins/contentmap:${top_builddir}/${apps_serna
     contentmap30.dll
 
 data:${inst_prefix}/bin:${top_builddir}/${apps_serna}/lib
-    serna42.dll
+    serna43.dll
 
 data:${inst_prefix}/lib:${top_builddir}/${apps_serna}/lib
     sapi21.lib
@@ -324,6 +324,7 @@ include:${THIRD_DIR}/xsltproc/MANIFEST
 include:${THIRD_DIR}/libxml/MANIFEST
 include:${THIRD_DIR}/qt/MANIFEST
 include:${THIRD_DIR}/qtpropertybrowser/MANIFEST
+include:${THIRD_DIR}/qtsingleapplication/MANIFEST
 include:${THIRD_DIR}/qscintilla/MANIFEST
 
 [linux,win32]

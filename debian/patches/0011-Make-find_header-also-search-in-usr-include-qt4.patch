@@ -1,4 +1,4 @@
-From 52d5db4d418512ce8e4bf139e1946e895b485285 Mon Sep 17 00:00:00 2001
+From c5e1fcf6b1bbc94b4ebda5870f736bc298d33ca0 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 10 Nov 2009 17:36:16 +0100
 Subject: Make find_header also search in /usr/include/qt4

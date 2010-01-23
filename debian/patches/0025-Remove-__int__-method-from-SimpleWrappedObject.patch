@@ -1,4 +1,4 @@
-From 9b12eed8b8ef9ecf229ab10d27b9c3beaa9a9a20 Mon Sep 17 00:00:00 2001
+From ab7d3f29dd458c9faa841209df767804efa87447 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:44:39 +0100
 Subject: Remove __int__ method from SimpleWrappedObject

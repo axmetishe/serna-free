@@ -1,4 +1,4 @@
-From e70dcc2f74b48898207dcf6b7982905787772bf1 Mon Sep 17 00:00:00 2001
+From 1f55384cc655a2cb1a41de58d4b2a3cd2f1516e1 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:29:24 +0100
 Subject: Use (void *) when debug-outputting a pointer

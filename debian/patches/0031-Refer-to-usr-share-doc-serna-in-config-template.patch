@@ -1,4 +1,4 @@
-From 61e5461ca3ba2064e097f4eb51d0c6b616dc1108 Mon Sep 17 00:00:00 2001
+From 1ebcbca1bf906ab81464d6a9c6da53c1d830f503 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 20:08:37 +0100
 Subject: Refer to /usr/share/doc/serna in config-template

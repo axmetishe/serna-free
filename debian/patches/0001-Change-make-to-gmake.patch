@@ -1,4 +1,4 @@
-From c753a8219b03ef6497c27c5b35fd3a3eeaf52495 Mon Sep 17 00:00:00 2001
+From 66a96b1c52bc98769d45eb2119341f64dc154543 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Mon, 9 Nov 2009 11:47:44 +0100
 Subject: Change make to gmake

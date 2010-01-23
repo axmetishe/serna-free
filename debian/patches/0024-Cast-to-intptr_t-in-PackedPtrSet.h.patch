@@ -1,4 +1,4 @@
-From cc157ca5e6f6a83b3f463324bf6c84a7251c7859 Mon Sep 17 00:00:00 2001
+From e0ce5285e9b098af3a0d9ee314e07cb6a6165f79 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:45:16 +0100
 Subject: Cast to (intptr_t) in PackedPtrSet.h

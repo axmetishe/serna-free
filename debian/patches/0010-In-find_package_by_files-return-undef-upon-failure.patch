@@ -1,4 +1,4 @@
-From c564ae90e26f9dadcb6d3a0806a9c65f94dca2d8 Mon Sep 17 00:00:00 2001
+From 625d424da5d2a79bc98cc2b4e6c19c36c83efeaf Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 10 Nov 2009 17:34:10 +0100
 Subject: In find_package_by_files, return undef upon failure

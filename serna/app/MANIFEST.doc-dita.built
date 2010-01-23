@@ -548,6 +548,16 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     IDREF_attribute_type.png
     ID_attribute_type.png
     NewDocumentDialog.gif
+    cursor-between-words-in-para.png
+    joined-list.png
+    section-element-expanded.png
+    adding-attributes.html
+    changing-attribute-values.html
+    collapsing-elements.html
+    deleting-attributes.html
+    expanding-elements.html
+    inserting-elements-with-required-attributes.html
+    using-attribute-help.html
     add-attribute-button.png
     add-to-favorites-context-menu.png
     add_attribute.png
@@ -582,6 +592,7 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     changing-input-focus-between-contentmap-and-editing-window.html
     changing-internal-entity-declaration.html
     changing-serna-view.html
+    changing-table-attributes.html
     check-spelling-button.png
     checking-spelling.html
     chinese-gui.png
@@ -593,6 +604,7 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     close-document-button.png
     closing-document.html
     collapsing-and-expanding-elements.html
+    column-attributes-dialog.png
     composite.html
     concept.html
     conref.html
@@ -624,21 +636,18 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     copy-as-text.html
     copy-as-xml-structure.html
     copy-button.png
+    copy-cut-paste-columns.html
     copy-cut-paste.html
     copy-paste-by-using-drag-drop.html
     create-custom-content.html
     create-xslt-parameter-set.html
     creating-dita-documents.html
     creating-new-document-with-default-template.html
-    creating-new-document-with-template.html
     creating-new-document-without-template.html
     creating-new-document.html
     cross-element-selection.png
     csl-sample.png
-    cursor-after-listitem.png
     cursor-after.png
-    cursor-before-listitem-2.png
-    cursor-before-listitem.png
     cursor-before.png
     cursor-between.png
     cursor-choose-2.png
@@ -649,8 +658,6 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     cursor-in-italic.png
     cursor-in-parent-hint.png
     cursor-in-parent.png
-    cursor-in-text.png
-    cursor-inside-listitem.png
     cursor-inside.png
     cursor-on-element-in-content-map.png
     custom-content-customization.html
@@ -672,8 +679,10 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     delete-no-template-view.html
     delete-view.html
     delete_attribute.png
-    deleted-listitem.png
+    deleting-a-table.html
+    deleting-columns-rows-cells-and-cell-content.html
     deleting-element.html
+    deleting-headers-and-footers.html
     deprecated-content-in-dita-documents.html
     dita-bookmap-opened-in-serna.png
     dita-composite-opened-in-serna.png
@@ -726,6 +735,7 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     document-properties-dialog.png
     document-tab-tooltip.png
     document-tabs.html
+    document-template-details.html
     document-toolbar.png
     document-type.html
     documentTemplatesDialog.gif
@@ -768,6 +778,7 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     element-toolbar.png
     element_help.png
     emphasis-role.png
+    enable-auto-spell-checking-button.png
     enabling-disabling-plugins.html
     enter-root-element-dialog-default-template.png
     enter-root-element-dialog-list.png
@@ -831,6 +842,8 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     insert-symbol-dialog-symbol-selected.png
     insert-symbol-dialog.html
     insert-symbol-dialog.png
+    insert-table-button.png
+    insert-table-dialog.png
     insert-toolbar.png
     insertElementDockedRight.gif
     insertElementDockedTop.gif
@@ -841,10 +854,13 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     inserted-listitem.png
     inserted-para.png
     inserted-title.png
+    inserting-a-table.html
+    inserting-columns-rows-and-cells.html
     inserting-declared-external-entity.html
     inserting-element.html
     inserting-external-entity-from-file.html
     inserting-external-entity.html
+    inserting-headers-and-footers.html
     inserting-internal-entity.html
     inserting-nbsp-symbols.html
     inserting-required-element.html
@@ -876,6 +892,7 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     markup-in-editing-window.html
     markup-in-editing-window.png
     menus.html
+    merging-cells.html
     metadata.html
     migrate-customizations.html
     modify-xslt-parameter-set.html
@@ -885,7 +902,7 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     new-doc-dialog.html
     new-doc-section.png
     new-document-button.png
-    new-document-dialog-default-template-details.png
+    new-document-created-with-default-template.png
     new-document-dialog-details.png
     new-document-dialog-my-plugin-details.png
     new-document-dialog.png
@@ -900,7 +917,9 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     open-file-as-plain-text-dialog.png
     open-recent-list-tooltip.png
     opening-a-document-as-plain-text.html
+    opening-a-document-from-the-command-line.html
     opening-a-document-in-wysiwyg-mode.html
+    opening-a-document-when-no-template-was-found.html
     opening-dita-1-0-documents.html
     opening-dita-documents.html
     opening-document-with-manually-specified-parameters.html
@@ -1073,12 +1092,14 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     specifying-viewers-for-published-documents.html
     specifying-xml-catalogs.html
     specifying-xml-files-search-path.html
+    spell-check-context-menu.png
     spell-check-dialog.png
     spellcheck-completed-message.png
     spellcheck.html
     split-advanced.png
     split-element-button.png
     split-para.png
+    splitting-cells.html
     splitting-element.html
     status-bar-text-mode.png
     status-bar.html
@@ -1113,7 +1134,9 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     unselection.html
     untagged.png
     untagging-element.html
+    using-automatic-spell-checking.html
     using-element-help.html
+    using-relative-paths-in-metadata-values.html
     validation-modes.html
     validator-message-duplicate-id.png
     validator-message-required-id-not-found.png
@@ -1124,6 +1147,7 @@ data:${inst_prefix}/${serna}/doc/users_guide:${top_builddir}/${apps_serna}/dist/
     whitespace-handling.html
     word-selected.png
     working-with-documents.html
+    working-with-tables.html
     wrap-into-element-dialog.png
     wrap-region.png
     wrapping-in-element.html

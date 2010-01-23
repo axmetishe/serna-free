@@ -1,4 +1,4 @@
-From 5f6d866f4ab01557511b7d5c919dd39bd7df8deb Mon Sep 17 00:00:00 2001
+From 4aab2b8c383d0fbb00c6fc862d74777196ad3aba Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:43:55 +0100
 Subject: Cast to (intptr_t) in String::number calls

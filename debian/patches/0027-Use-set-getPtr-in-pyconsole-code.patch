@@ -1,4 +1,4 @@
-From 6929810e780bd7f88adf27c79c1ecc9e4ca2413b Mon Sep 17 00:00:00 2001
+From 5a591c6c26e406d4367a6014c42dbe50e5cfb27f Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:44:59 +0100
 Subject: Use set/getPtr in pyconsole code
@@ -22,10 +22,10 @@ index 15dcbbb..377f6c2 100644
          commandLineEdit_->setEnabled(false);
      textEdit_->clear();
 diff --git a/serna/plugins/pyplugin/pyplugin.cxx b/serna/plugins/pyplugin/pyplugin.cxx
-index c32376b..3a6f652 100644
+index 3e8ab1f..0c66f33 100644
 --- a/serna/plugins/pyplugin/pyplugin.cxx
 +++ b/serna/plugins/pyplugin/pyplugin.cxx
-@@ -213,10 +213,10 @@ static PyObject* init_pyclass(SernaApiBase* props, SString& className)
+@@ -215,10 +215,10 @@ static PyObject* init_pyclass(SernaApiBase* props, SString& className)
          DYNCALL("Py_Initialize");
          DYNCALL("PyEval_InitThreads");
          PropertyNode cfgRoot(SernaConfig::root());
@@ -37,9 +37,9 @@ index c32376b..3a6f652 100644
 +        cfgRoot.makeDescendant(PYTHON_RSS_PROP).setPtr(pfunc);
 +        pfunc = (void*)py_run_file;
 +        cfgRoot.makeDescendant(PYTHON_RSF_PROP).setPtr(pfunc);
+         SString plugins_dir     = SernaConfig::getProperty("vars/plugins");
          SString plugins_bin_dir = SernaConfig::getProperty("vars/plugins_bin");
          SString data_dir = SernaConfig::getProperty("vars/data_dir");
-         py_run("import sys");
 -- 
 1.6.6
 

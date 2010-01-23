@@ -38,8 +38,7 @@
 #ifndef SPELLER_REACTOR_H_
 #define SPELLER_REACTOR_H_
 
-#include "common/common_defs.h"
-#include "common/StringDecl.h"
+#include "common/RangeString.h"
 
 namespace Common {
 class PropertyNode;
@@ -47,15 +46,17 @@ class PropertyNode;
 
 class SpellerReactor {
 public:
-    virtual bool ignore(const Common::UCRange&) = 0;
-    virtual bool ignoreAll(const Common::UCRange&) = 0;
-    virtual bool add(const Common::UCRange&) = 0;
-    virtual bool change(const Common::UCRange& word,
-                        const Common::UCRange& repl) = 0;
-    virtual bool changeAll(const Common::UCRange& word,
-                           const Common::UCRange& repl) = 0;
+    typedef Common::RangeString RangeString;
+
+    virtual bool ignore(const RangeString&) = 0;
+    virtual bool ignoreAll(const RangeString&) = 0;
+    virtual bool add(const RangeString&) = 0;
+    virtual bool change(const RangeString& word,
+                        const RangeString& repl) = 0;
+    virtual bool changeAll(const RangeString& word,
+                           const RangeString& repl) = 0;
     virtual bool skipElement() = 0;
-    virtual bool setDict(const Common::UCRange&) = 0;
+    virtual bool setDict(const RangeString&) = 0;
     virtual bool start() = 0;
     virtual bool shutdown() = 0;
     virtual Common::PropertyNode* getProps() const = 0;

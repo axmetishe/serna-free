@@ -1,4 +1,4 @@
-From 5ab61635776852f9f0bc4dc135537f9e7710f92a Mon Sep 17 00:00:00 2001
+From 2d05c51c94750a953721564408edee602388c779 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Mon, 9 Nov 2009 12:20:57 +0100
 Subject: Fix som bison errors

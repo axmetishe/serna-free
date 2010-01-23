@@ -1,4 +1,4 @@
-From 74920c1eddaaff937605e578f639d61577d50a6b Mon Sep 17 00:00:00 2001
+From 90afcfd46b7be7a6a554b7ade501c958fbe85e92 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 10 Nov 2009 15:58:04 +0100
 Subject: libsp adjustments for 64 bits

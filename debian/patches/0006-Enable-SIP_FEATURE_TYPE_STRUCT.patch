@@ -1,4 +1,4 @@
-From deda6a95dc6701acfd1546eaf0d4a962bf42dfab Mon Sep 17 00:00:00 2001
+From 5d3b53100cf8a9dcebf77e1d3fea0dee73a8ff9f Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 10 Nov 2009 15:02:07 +0100
 Subject: Enable SIP_FEATURE_TYPE_STRUCT

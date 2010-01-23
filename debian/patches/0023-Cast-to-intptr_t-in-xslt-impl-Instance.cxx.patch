@@ -1,4 +1,4 @@
-From 5c17d45a049bca355ab228ebf5dd5c84d831aff9 Mon Sep 17 00:00:00 2001
+From 485927aa7ba070a441a2224e49c5150057b9304e Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:45:37 +0100
 Subject: Cast to (intptr_t) in xslt/impl/Instance.cxx
