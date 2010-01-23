@@ -1,4 +1,4 @@
-serna-free (0.svn235-1) UNRELEASED; urgency=low
+serna-free (0.svn235-1) unstable; urgency=low
 
   * New upstream version
     + QtSingleApplication now treated as a 3rd party component
@@ -7,7 +7,7 @@ serna-free (0.svn235-1) UNRELEASED; urgency=low
     orig.tar.gz file (was already removed in my master branch)
   * Ship AUTHORS file
 
- -- Joachim Breitner <nomeata@debian.org>  Sun, 24 Jan 2010 00:04:56 +0100
+ -- Joachim Breitner <nomeata@debian.org>  Sun, 24 Jan 2010 00:24:44 +0100
 
 serna-free (0.svn139-1) unstable; urgency=low
 
