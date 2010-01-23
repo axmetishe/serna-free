@@ -1,3 +1,10 @@
+serna-free (0.svn235-1) UNRELEASED; urgency=low
+
+  * New upstream version
+    + QtSingleApplication now treated as a 3rd party component
+
+ -- Joachim Breitner <nomeata@debian.org>  Sat, 23 Jan 2010 22:21:09 +0100
+
 serna-free (0.svn139-1) unstable; urgency=low
 
   * Initial release. (Closes: #535828)
