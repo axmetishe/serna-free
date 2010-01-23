@@ -84,7 +84,7 @@ override_dh_clean:
 	rm -f 3rd/antlr/antlr
 	rm -rf 3rd/antlr/include 3rd/antlr/lib 3rd/bin 3rd/lib
 	rm -f 3rd/dita-ot/dita-dir-catalog.xml 3rd/dita-ot/dita-dir.ent
-	rm -f 3rd/pyqt/MANIFEST 3rd/python/MANIFEST
+	rm -f 3rd/pyqt/MANIFEST 3rd/python/MANIFEST 3rd/docbook/MANIFEST
 	rm -f 3rd/qtpropertybrowser/2.5/.configure_options 3rd/qtpropertybrowser/2.5/custom.pri
 	rm -f 3rd/qtpropertybrowser/configure.log 3rd/qtpropertybrowser/include
 	rm -f serna/dist/bin/xsltproc
