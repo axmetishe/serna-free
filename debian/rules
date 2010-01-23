@@ -79,8 +79,14 @@ override_dh_clean:
 		3rd/qt/4.5.2/Makefile \
 		3rd/qtpropertybrowser/2.5/Makefile \
 		3rd/sip/4.8.2/Makefile \
-		3rd/xsltproc/1.1.19/Makefile
-	rm -f 3rd/antlr/configure.log 3rd/antlr/2.7.1/.configure_options
+		3rd/xsltproc/1.1.19/Makefile \
+		3rd/qtsingleapplication/2.6_1/Makefile
+	rm -f	3rd/antlr/configure.log \
+		3rd/antlr/2.7.1/.configure_options \
+		3rd/qtsingleapplication/2.6_1/.configure_options
+	rm -f	3rd/qtsingleapplication/2.6_1/custom.pri \
+		3rd/qtsingleapplication/configure.log \
+		3rd/qtsingleapplication/include
 	rm -f 3rd/antlr/antlr
 	rm -rf 3rd/antlr/include 3rd/antlr/lib 3rd/bin 3rd/lib
 	rm -f 3rd/dita-ot/dita-dir-catalog.xml 3rd/dita-ot/dita-dir.ent
