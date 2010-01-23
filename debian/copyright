@@ -154,8 +154,19 @@ debian/3rd/qtpropertybrowser-2.5-opensource.tar.gz:
  License Usage, version 2.1, or alternatively under the terms of the GNU
  General Public License Usage, version 3.0. On Debian sytems, the full texts of
  these licenses can be found under ‘/usr/share/common-licenses/LGPL-2.1’ resp.
- ‘/usr/share/common-licenses/LGPL-3’.
+ ‘/usr/share/common-licenses/GPL-3’.
 
 -------------------------------------------------------------------------------
+
+debian/3rd/qtsingleapplication-2.6_1-opensource.tar.gz:
+ Copyright:
+	© 2009 Nokia Corporation and/or its subsidiary(-ies)
+
+ This package is licensed under the terms of the GNU Lesser General Public
+ License Usage, version 2.1, or alternatively under the terms of the GNU
+ General Public License Usage, version 3.0. On Debian sytems, the full texts of
+ these licenses can be found under ‘/usr/share/common-licenses/LGPL-2.1’ resp.
+ ‘/usr/share/common-licenses/GPL-3’.
+
 ===============================================================================
 
