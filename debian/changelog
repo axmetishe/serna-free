@@ -5,8 +5,9 @@ serna-free (0.svn235-1) UNRELEASED; urgency=low
       Thus ship qtsingleapplication-2.6_1-opensource.tar.gz in debian/3rd
   * Removed convenience copy of docbook-xsl-1.68.1.tar.bz2 from self-created
     orig.tar.gz file (was already removed in my master branch)
+  * Ship AUTHORS file
 
- -- Joachim Breitner <nomeata@debian.org>  Sat, 23 Jan 2010 22:21:09 +0100
+ -- Joachim Breitner <nomeata@debian.org>  Sun, 24 Jan 2010 00:04:56 +0100
 
 serna-free (0.svn139-1) unstable; urgency=low
 
