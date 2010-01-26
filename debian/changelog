@@ -2,6 +2,7 @@ serna-free (0.svn235-2) UNRELEASED; urgency=low
 
   * Added dependencies on python-qt4 and python-sip (Closes: #566987)
   * Manually version dependency on python-sip (Closes: #566823)
+  * Add VCS-* headers 
 
  -- Joachim Breitner <nomeata@debian.org>  Tue, 26 Jan 2010 21:47:58 +0100
 

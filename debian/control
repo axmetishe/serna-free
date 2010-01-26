@@ -31,6 +31,8 @@ Build-Depends:
  docbook-xsl,
 Standards-Version: 3.8.3
 Homepage: http://www.syntext.com/products/serna-free/
+VCS-Git: git://git.nomeata.de/serna.git
+VCS-Browser: http://git.nomeata.de/?p=serna.git
 
 Package: serna
 Architecture: any
