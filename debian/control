@@ -41,6 +41,9 @@ Depends:
  ${python:Depends},
  xsltproc,
  docbook-xsl,
+ python-qt4,
+ python-sip4 (>= 4.9-1),
+ python-sip4 (<< 4.9+),
 Description: Graphical XML editor
  Serna Free Open Source XML editor is an easy-to-use visual XML
  application which requires virtually no technical experience from
