@@ -62,15 +62,7 @@
 
 using namespace Common;
 
-#ifndef _WIN32
-# ifndef __APPLE__ 
-static const char ASSISTANT_EXE[] = NOTR("assistant");
-# else
-static const char ASSISTANT_EXE[] = NOTR("Assistant.app/Contents/MacOS/Assistant");
-# endif
-#else
-static const char ASSISTANT_EXE[] = NOTR("assistant.exe");
-#endif
+static const char ASSISTANT_EXE[] = NOTR("assistant-qt4");
 static const char HELP_PATH_PROP[] = NOTR("app/help-path");
 
 static void show_error(const QString& msg)

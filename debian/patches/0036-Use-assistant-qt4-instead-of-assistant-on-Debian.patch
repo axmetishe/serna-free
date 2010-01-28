@@ -1,0 +1,33 @@
+From 2e804ee7a533352d9025b72ab6556c38b12ba46f Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Thu, 28 Jan 2010 21:08:46 +0100
+Subject: Use assistant-qt4 instead of assistant on Debian
+
+---
+ serna/utils/impl/HelpAssistant.cxx |   10 +---------
+ 1 files changed, 1 insertions(+), 9 deletions(-)
+
+diff --git a/serna/utils/impl/HelpAssistant.cxx b/serna/utils/impl/HelpAssistant.cxx
+index a9bb165..42516b4 100644
+--- a/serna/utils/impl/HelpAssistant.cxx
++++ b/serna/utils/impl/HelpAssistant.cxx
+@@ -62,15 +62,7 @@
+ 
+ using namespace Common;
+ 
+-#ifndef _WIN32
+-# ifndef __APPLE__ 
+-static const char ASSISTANT_EXE[] = NOTR("assistant");
+-# else
+-static const char ASSISTANT_EXE[] = NOTR("Assistant.app/Contents/MacOS/Assistant");
+-# endif
+-#else
+-static const char ASSISTANT_EXE[] = NOTR("assistant.exe");
+-#endif
++static const char ASSISTANT_EXE[] = NOTR("assistant-qt4");
+ static const char HELP_PATH_PROP[] = NOTR("app/help-path");
+ 
+ static void show_error(const QString& msg)
+-- 
+1.6.6
+

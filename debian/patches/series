@@ -33,3 +33,4 @@
 0033-Fix-Syntax-error-Unterminated-quoted-string.patch
 0034-Do-not-clean-3rd-qt-icons.patch
 0035-Do-not-set-JAVA_HOME-environment-variable.patch
+0036-Use-assistant-qt4-instead-of-assistant-on-Debian.patch

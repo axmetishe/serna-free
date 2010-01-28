@@ -5,6 +5,7 @@ serna-free (0.svn235-3) UNRELEASED; urgency=low
   * Fix PDF publishing by not setting JAVA_PATH to a non-existant directory.
     (Closes: #567160)
   * Do not compress machine-readable files in /usr/share/doc/serna
+  * Use assistant-qt4 instead of assistant 
 
  -- Joachim Breitner <nomeata@debian.org>  Thu, 28 Jan 2010 19:57:21 +0100
 
