@@ -227,15 +227,6 @@ int Serna::exec(int& argc, char** argv)
 
     PropertyNode* cfgRoot = config().root();
 
-#if defined(_WIN32) || defined(linux) && (!defined(_DEBUG) || defined(NDEBUG))
-    String javaHome(cfgRoot->getString(NOTR("vars/java_home")));
-    if (javaHome.empty()) {
-        javaHome.append(config().getDataDir());
-        javaHome.append(1, PathName::DIR_SEP).append(NOTR("jre"));
-    }
-    set_env(from_latin1(NOTR("JAVA_HOME")), javaHome);
-#endif
-
     const bool isActiveX = ax_serna().isStartedByCOM();
     if (isActiveX)
         config().root()->makeDescendant(NOTR("#is-ax"))->setBool(true);
