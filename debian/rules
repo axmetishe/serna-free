@@ -97,3 +97,6 @@ override_dh_clean:
 
 override_dh_makeshlibs:
 	# We do not have any public shared libraries
+
+override_dh_compress:
+	dh_compress -Xserna.qch -Xserna.qhc -Xserna.adp -X.xml

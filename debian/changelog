@@ -4,8 +4,9 @@ serna-free (0.svn235-3) UNRELEASED; urgency=low
     (Closes: #567162) 
   * Fix PDF publishing by not setting JAVA_PATH to a non-existant directory.
     (Closes: #567160)
+  * Do not compress machine-readable files in /usr/share/doc/serna
 
- -- Joachim Breitner <nomeata@debian.org>  Thu, 28 Jan 2010 19:38:01 +0100
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 28 Jan 2010 19:57:21 +0100
 
 serna-free (0.svn235-2) unstable; urgency=low
 
