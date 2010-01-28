@@ -1,4 +1,4 @@
-serna-free (0.svn235-3) UNRELEASED; urgency=low
+serna-free (0.svn235-3) unstable; urgency=low
 
   * Package recommends fop now, thx to Mathieu Malaterre for suggesting this
     (Closes: #567162) 
@@ -7,7 +7,7 @@ serna-free (0.svn235-3) UNRELEASED; urgency=low
   * Do not compress machine-readable files in /usr/share/doc/serna
   * Use assistant-qt4 instead of assistant 
 
- -- Joachim Breitner <nomeata@debian.org>  Thu, 28 Jan 2010 19:57:21 +0100
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 28 Jan 2010 21:09:28 +0100
 
 serna-free (0.svn235-2) unstable; urgency=low
 
