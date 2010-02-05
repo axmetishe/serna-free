@@ -29,7 +29,7 @@ Build-Depends:
  libaspell-dev,
  python-sip4,
  docbook-xsl,
-Standards-Version: 3.8.3
+Standards-Version: 3.8.4
 Homepage: http://www.syntext.com/products/serna-free/
 VCS-Git: git://git.nomeata.de/serna.git
 VCS-Browser: http://git.nomeata.de/?p=serna.git

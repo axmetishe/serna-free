@@ -1,6 +1,7 @@
 serna-free (0.svn270-1) UNRELEASED; urgency=low
 
   * New upstream release. 22 patches applied upstream!
+  * Bump standards version, no change 
 
  -- Joachim Breitner <nomeata@debian.org>  Fri, 05 Feb 2010 17:28:52 +0100
 
