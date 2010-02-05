@@ -1,4 +1,4 @@
-From b3232bb32d4367c52f0306738050fa2aa0d00eeb Mon Sep 17 00:00:00 2001
+From ee08037300f40ba6a7ad631392379b8bb01c2b23 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 20:14:35 +0100
 Subject: Refer to /usr/share/xml/docbook/stylesheet/docbook-xsl in all relevant places
@@ -481,5 +481,5 @@ index b022b30..4c4e2d6 100644
  <xsl:param name="onechunk" select="0"/>
  <xsl:param name="refentry.separator" select="0"/>
 -- 
-1.6.6
+1.6.6.1
 

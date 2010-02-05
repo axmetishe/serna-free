@@ -1,4 +1,4 @@
-From 90afcfd46b7be7a6a554b7ade501c958fbe85e92 Mon Sep 17 00:00:00 2001
+From 3226774e1512ac78f7de422a19f257d4059594f1 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 10 Nov 2009 15:58:04 +0100
 Subject: libsp adjustments for 64 bits
@@ -74,5 +74,5 @@ index 9ade7b8..5535850 100644
  __instantiate(NamedTable<Id>)
  __instantiate(NamedTableIter<Id>)
 -- 
-1.6.6
+1.6.6.1
 

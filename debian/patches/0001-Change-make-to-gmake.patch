@@ -1,14 +1,13 @@
-From 66a96b1c52bc98769d45eb2119341f64dc154543 Mon Sep 17 00:00:00 2001
+From ddfee19f89d3e664c57ac3baf7526c59d4a54324 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Mon, 9 Nov 2009 11:47:44 +0100
 Subject: Change make to gmake
 
 ---
- 3rd/defaults.pro            |    2 +-
- 3rd/qt/qt-unix.pro          |    2 +-
- defaults.pro                |    2 +-
- serna/app/get_undef_syms.sh |    2 +-
- 4 files changed, 4 insertions(+), 4 deletions(-)
+ 3rd/defaults.pro   |    2 +-
+ 3rd/qt/qt-unix.pro |    1 +
+ defaults.pro       |    2 +-
+ 3 files changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/3rd/defaults.pro b/3rd/defaults.pro
 index 70fc820..b82c42d 100644
@@ -24,14 +23,13 @@ index 70fc820..b82c42d 100644
  static:UNIX_LIB_EXT     = .a
  dynamic:UNIX_LIB_EXT    = .so
 diff --git a/3rd/qt/qt-unix.pro b/3rd/qt/qt-unix.pro
-index 2c92e65..9dc01cc 100644
+index 94adc10..cf00f31 100644
 --- a/3rd/qt/qt-unix.pro
 +++ b/3rd/qt/qt-unix.pro
-@@ -2,7 +2,7 @@
+@@ -2,6 +2,7 @@
  #
  
  PACKAGE_CONFIGURE   = ./configure
--PACKAGE_MAKE        = gmake
 +PACKAGE_MAKE        = make
  PACKAGE_MAKEFILE    = Makefile
  PACKAGE_MAKEFILEOPT = -f
@@ -49,19 +47,6 @@ index 6e8fcc7..6297df9 100644
  unix:COPY            = cp
  unix:BISON           = bison
  unix:TMAKE_CXXFLAGS  += -g
-diff --git a/serna/app/get_undef_syms.sh b/serna/app/get_undef_syms.sh
-index b1d4ee0..0c8740d 100755
---- a/serna/app/get_undef_syms.sh
-+++ b/serna/app/get_undef_syms.sh
-@@ -80,7 +80,7 @@ save_libs $plugin
- 
- cd ${plugin_dir}
- COLLECT_NO_DEMANGLE=Y; export COLLECT_NO_DEMANGLE
--gmake LD_SHLIB_UNDEF="${LD_NOUNDEF}" ${TARGET} 2>&1 | cat > ${OUTFILE}
-+make LD_SHLIB_UNDEF="${LD_NOUNDEF}" ${TARGET} 2>&1 | cat > ${OUTFILE}
- RC=1
- if ${GREP} -q "${UNDEF_ERRMSG}" ${OUTFILE}; then 
-     RC=0
 -- 
-1.6.6
+1.6.6.1
 

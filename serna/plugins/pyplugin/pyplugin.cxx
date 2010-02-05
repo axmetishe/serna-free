@@ -215,9 +215,9 @@ static PyObject* init_pyclass(SernaApiBase* props, SString& className)
         DYNCALL("Py_Initialize");
         DYNCALL("PyEval_InitThreads");
         PropertyNode cfgRoot(SernaConfig::root());
-        void* pfunc = (void*)DL_SYM("PyRun_SimpleString");
+        void* pfunc = (void *)DL_SYM("PyRun_SimpleString");
         cfgRoot.makeDescendant(PYTHON_RSS_PROP).setPtr(pfunc);
-        pfunc = (void*)py_run_file;
+        pfunc = (void *)py_run_file;
         cfgRoot.makeDescendant(PYTHON_RSF_PROP).setPtr(pfunc);
         SString plugins_dir     = SernaConfig::getProperty("vars/plugins");
         SString plugins_bin_dir = SernaConfig::getProperty("vars/plugins_bin");

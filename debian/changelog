@@ -1,3 +1,9 @@
+serna-free (0.svn270-1) UNRELEASED; urgency=low
+
+  * New upstream release. 22 patches applied upstream!
+
+ -- Joachim Breitner <nomeata@debian.org>  Fri, 05 Feb 2010 17:28:52 +0100
+
 serna-free (0.svn235-3) unstable; urgency=low
 
   * Package recommends fop now, thx to Mathieu Malaterre for suggesting this

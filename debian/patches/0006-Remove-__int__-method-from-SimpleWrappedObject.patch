@@ -1,4 +1,4 @@
-From ab7d3f29dd458c9faa841209df767804efa87447 Mon Sep 17 00:00:00 2001
+From 126dc74ad95cb323e1b113fc85483b6868c4b9c9 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:44:39 +0100
 Subject: Remove __int__ method from SimpleWrappedObject
@@ -11,20 +11,20 @@ this method to see if it is actually needed.
  1 files changed, 0 insertions(+), 4 deletions(-)
 
 diff --git a/serna/pyapi/common/WrappedObject.sip b/serna/pyapi/common/WrappedObject.sip
-index 4388e89..f9a5855 100644
+index c6dd301..f9a5855 100644
 --- a/serna/pyapi/common/WrappedObject.sip
 +++ b/serna/pyapi/common/WrappedObject.sip
 @@ -14,10 +14,6 @@ public:
  %MethodCode
          sipRes = !sipCpp->isNull();
  %End
--    int __int__();
--%MethodCode
--        sipRes = (int)sipCpp->getRep();
--%End
+-//    int __int__();
+-//%MethodCode
+-//        sipRes = (int)sipCpp->getRep();
+-//%End
      bool operator==(const SimpleWrappedObject&) const;
      bool operator!=(const SimpleWrappedObject&) const;
  };
 -- 
-1.6.6
+1.6.6.1
 
