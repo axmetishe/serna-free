@@ -12,7 +12,7 @@ Build-Depends:
  pkg-config,
  qt4-qmake,
  qt4-dev-tools,
- sip4,
+ python-sip-dev,
  libqt4-assistant,
  libx11-dev,
  x11proto-core-dev,
@@ -27,7 +27,6 @@ Build-Depends:
  python-qt4-dev,
  pyqt4-dev-tools,
  libaspell-dev,
- python-sip4,
  docbook-xsl,
 Standards-Version: 3.8.4
 Homepage: http://www.syntext.com/products/serna-free/
@@ -44,8 +43,7 @@ Depends:
  xsltproc,
  docbook-xsl,
  python-qt4,
- python-sip4 (>= 4.9-1),
- python-sip4 (<< 4.9+),
+ ${sip:Depends},
 Recommends:
  fop,
 Description: Graphical XML editor
