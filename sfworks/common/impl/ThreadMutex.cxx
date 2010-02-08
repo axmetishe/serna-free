@@ -31,11 +31,6 @@
  *  Implementation file for ThreadMutex.h
  */
 
-#if !defined(__i386__) && !defined(__sun) && \
-    !defined(_WIN32) && !defined(__APPLE__) && !defined(__amd64__)
-# error Atomic increment/decrement is not defined for your architecture
-#endif
-
 #include "common/common_defs.h"
 
 #ifdef MULTI_THREADED
@@ -119,6 +114,6 @@ COMMON_NS_END
 
 #if !defined(INLINE_ATOMICS)
 # define INLINE_ATOMICS
-# include "machdep/ThreadMutexAtomics.i"
+# include "common/ThreadMutexAtomics.cpp"
 #endif
 

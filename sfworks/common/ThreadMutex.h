@@ -43,6 +43,8 @@
 #include "common/common_defs.h"
 #include "common/common_types.h"
 
+#include <atomic_ops.h>
+
 
 #ifdef MULTI_THREADED
 # ifdef _WIN32
@@ -69,8 +71,8 @@ public:
     typedef NullThreadMutex MutexType;
 #endif
 
-    typedef int32 IntType;
-    typedef int32 VolatileIntType;
+    typedef AO_t IntType;
+    typedef IntType VolatileIntType;
 
 #ifndef MUTEX_DEBUG
     static void initialize(MutexType*) {}
@@ -111,12 +113,6 @@ public:
     {
         lval = rval;
     }
-    static IntType atomicExchange(VolatileIntType& lval, IntType rval)
-    {
-        IntType tmp = lval;
-        lval = rval;
-        return tmp;
-    }
 #ifdef MUTEX_DEBUG
 private:
     bool locked_;
@@ -130,7 +126,7 @@ private:
  */
 class COMMON_EXPIMP ThreadMutex {
 public:
-    typedef int32 IntType;
+    typedef AO_t IntType;
 # ifdef _WIN32
     // Win32 critical sections
     typedef CRITICAL_SECTION MutexType;
@@ -165,7 +161,7 @@ COMMON_NS_END
 #  undef INLINE_ATOMICS
 # endif
 # define INLINE_ATOMICS inline
-# include "machdep/ThreadMutexAtomics.i"
+# include "common/ThreadMutexAtomics.cpp"
 # undef INLINE_ATOMICS
 #endif
 
