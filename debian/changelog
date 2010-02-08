@@ -1,8 +1,8 @@
-serna-free (0.svn270-2) UNRELEASED; urgency=low
+serna-free (0.svn270-2) unstable; urgency=low
 
   * Depend on python-sip-dev and use dh_sip 
 
- -- Joachim Breitner <nomeata@debian.org>  Sun, 07 Feb 2010 22:37:20 +0100
+ -- Joachim Breitner <nomeata@debian.org>  Sun, 07 Feb 2010 22:40:43 +0100
 
 serna-free (0.svn270-1) unstable; urgency=low
 
