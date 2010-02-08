@@ -7,7 +7,7 @@ INCLUDEPATH += \
                $(top_builddir)/sfworks; \
                $$srcdir/impl;
 
-USE = QtCore
+USE = QtCore libatomic-ops
 #               $(THIRD_DIR)/qt/include/QtCore;
 
 unix:INCLUDEPATH += $$srcdir/impl/unix;

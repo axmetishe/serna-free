@@ -19,7 +19,8 @@ SUBDIRS +=  \
             qscintilla:qt \
             sip:python;qt \
             pyqt:sip;iconv \
-            doxygen
+            doxygen \
+	    libatomic-ops
 
 darwin:SUBDIRS -= jdk
 
