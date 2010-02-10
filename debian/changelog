@@ -1,3 +1,9 @@
+serna-free (0.svn270-3) UNRELEASED; urgency=low
+
+  * Add Build-Conflicts on qt3-dev-tools, to avoid FTBFS
+
+ -- Joachim Breitner <nomeata@debian.org>  Wed, 10 Feb 2010 22:47:42 +0100
+
 serna-free (0.svn270-2) unstable; urgency=low
 
   * Depend on python-sip-dev and use dh_sip 
