@@ -27,7 +27,7 @@ Build-Depends:
  python-qt4-dev,
  pyqt4-dev-tools,
  libaspell-dev,
- docbook-xsl,
+ docbook-xsl (>= 1.75.2+dfsg-5),
 Build-Conflicts:
  qt3-dev-tools
 Standards-Version: 3.8.4
@@ -43,7 +43,7 @@ Depends:
  ${perl:Depends},
  ${python:Depends},
  xsltproc,
- docbook-xsl,
+ docbook-xsl (>= 1.75.2+dfsg-5),
  python-qt4,
  ${sip:Depends},
 Recommends:
