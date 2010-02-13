@@ -23,7 +23,7 @@ Build-Depends:
  libxml2-dev,
  libxslt1-dev,
  libqt4-dev,
- libqscintilla2-dev,
+ libqscintilla2-dev (>= 2.4-5),
  python-qt4-dev,
  pyqt4-dev-tools,
  libaspell-dev,
