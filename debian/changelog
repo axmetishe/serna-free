@@ -1,4 +1,4 @@
-serna-free (0.svn270-3) UNRELEASED; urgency=low
+serna-free (0.svn270-3) unstable; urgency=low
 
   * Add Build-Conflicts on qt3-dev-tools, to avoid FTBFS
   * Versioned dependency on docbook-xsl, for the
@@ -6,7 +6,7 @@ serna-free (0.svn270-3) UNRELEASED; urgency=low
   * Closes: #569666: Build-dep on libqscintilla2-dev >= 2.4-5
   * Build a serna-dbg package 
 
- -- Joachim Breitner <nomeata@debian.org>  Wed, 10 Feb 2010 22:47:42 +0100
+ -- Joachim Breitner <nomeata@debian.org>  Sat, 06 Mar 2010 23:17:43 +0100
 
 serna-free (0.svn270-2) unstable; urgency=low
 
