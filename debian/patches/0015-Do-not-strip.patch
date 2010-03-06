@@ -1,11 +1,12 @@
-From 7eaa367625b45e5d55bfa5c686868b6fd233b95d Mon Sep 17 00:00:00 2001
+From c60784a807d13ebedd2677099f8e49b34b0de7f9 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sat, 6 Mar 2010 20:42:39 +0100
 Subject: Do not strip
 
 ---
  tools/buildsys/tmake/lib/unix/generic.t |    4 ----
- 1 files changed, 0 insertions(+), 4 deletions(-)
+ tools/manifest/manifest2all.py          |    3 +++
+ 2 files changed, 3 insertions(+), 4 deletions(-)
 
 diff --git a/tools/buildsys/tmake/lib/unix/generic.t b/tools/buildsys/tmake/lib/unix/generic.t
 index 39accee..63e4a39 100644
@@ -28,6 +29,20 @@ index 39accee..63e4a39 100644
 -#$ EnableOutput() unless Project("STRIP_BINARY");
  
  staticlib: $(TARGETA)
+ 
+diff --git a/tools/manifest/manifest2all.py b/tools/manifest/manifest2all.py
+index ae94d96..e68b000 100755
+--- a/tools/manifest/manifest2all.py
++++ b/tools/manifest/manifest2all.py
+@@ -54,6 +54,9 @@ def strip_flags():
+     return strip_flags
+     
+ def print_strip_cmd(srcname, outfile):
++    # On Debian, please do not strip
++    return
++
+     if "win32" == sys.platform[:5]:
+         return
  
 -- 
 1.7.0
