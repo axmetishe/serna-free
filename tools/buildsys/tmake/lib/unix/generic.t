@@ -293,7 +293,6 @@ all: #$ ExpandGlue("ALL_DEPS",""," "," "); $text .= '$(TARGET)';
 $(TARGET): $(UICDECLS) $(OBJECTS) $(OBJMOC) #$ Expand("TARGETDEPS");
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJMOC) $(LIBS)
 #!	@ls $(OBJECTS) $(OBJMOC) > $(TARGET_OBJECTS)
-#!$ $text .= "\tstrip \$(STRIP_FLAGS) \$@" if (Config("release") && Config("app"));
 #$ Project("TMAKE_APP_FLAG") || EnableOutput();
 #$ (Config("staticlib") || Project("TMAKE_APP_FLAG")) && DisableOutput();
 all: #$ ExpandGlue("ALL_DEPS",""," ",""); Expand("DESTDIR_TARGET");
@@ -329,9 +328,6 @@ all: #$ ExpandGlue("ALL_DEPS",""," ",""); Expand("DESTDIR_TARGET");
 	    }
 	#$}
 #!	@ls $(OBJECTS) > $(TARGET_OBJECTS)
-#$ DisableOutput() unless Project("STRIP_BINARY");
-#!$ $text .= "\tstrip --strip-unneeded \$@" if Config("release");
-#$ EnableOutput() unless Project("STRIP_BINARY");
 
 staticlib: $(TARGETA)
 
