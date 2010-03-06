@@ -4,6 +4,7 @@ serna-free (0.svn270-3) UNRELEASED; urgency=low
   * Versioned dependency on docbook-xsl, for the
     /usr/share/xml/docbook/stylesheet/docbook-xsl location.
   * Closes: #569666: Build-dep on libqscintilla2-dev >= 2.4-5
+  * Build a serna-dbg package 
 
  -- Joachim Breitner <nomeata@debian.org>  Wed, 10 Feb 2010 22:47:42 +0100
 

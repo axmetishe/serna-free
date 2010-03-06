@@ -58,3 +58,17 @@ Description: Graphical XML editor
  .
  Serna Free XML editor employs XSLT and XSL-FO to render XML documents
  in print-like appearance for fast and easy authoring.
+
+Package: serna-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends:
+    serna (= ${binary:Version}),
+    ${misc:Depends}
+Description: debugging symbols for serna
+ Serna Free Open Source XML editor is an easy-to-use visual XML
+ application which requires virtually no technical experience from
+ technical writers to author XML documents.
+ .
+ This package contains the debugging symbols for serna.

@@ -102,3 +102,6 @@ override_dh_makeshlibs:
 
 override_dh_compress:
 	dh_compress -Xserna.qch -Xserna.qhc -Xserna.adp -X.xml
+
+override_dh_strip:
+	dh_strip --dbg-package=serna-dbg
