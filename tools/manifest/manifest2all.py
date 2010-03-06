@@ -54,6 +54,9 @@ def strip_flags():
     return strip_flags
     
 def print_strip_cmd(srcname, outfile):
+    # On Debian, please do not strip
+    return
+
     if "win32" == sys.platform[:5]:
         return
 
