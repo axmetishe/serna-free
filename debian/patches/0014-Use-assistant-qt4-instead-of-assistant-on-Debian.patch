@@ -29,5 +29,5 @@ index a9bb165..42516b4 100644
  
  static void show_error(const QString& msg)
 -- 
-1.6.6.1
+1.7.0
 

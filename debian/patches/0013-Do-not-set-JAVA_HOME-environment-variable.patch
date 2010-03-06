@@ -58,5 +58,5 @@ index 228415f..348425d 100755
      def __str__(self):
          return PLUGIN_ID
 -- 
-1.6.6.1
+1.7.0
 

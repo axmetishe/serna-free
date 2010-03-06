@@ -1,0 +1,34 @@
+From 7eaa367625b45e5d55bfa5c686868b6fd233b95d Mon Sep 17 00:00:00 2001
+From: Joachim Breitner <mail@joachim-breitner.de>
+Date: Sat, 6 Mar 2010 20:42:39 +0100
+Subject: Do not strip
+
+---
+ tools/buildsys/tmake/lib/unix/generic.t |    4 ----
+ 1 files changed, 0 insertions(+), 4 deletions(-)
+
+diff --git a/tools/buildsys/tmake/lib/unix/generic.t b/tools/buildsys/tmake/lib/unix/generic.t
+index 39accee..63e4a39 100644
+--- a/tools/buildsys/tmake/lib/unix/generic.t
++++ b/tools/buildsys/tmake/lib/unix/generic.t
+@@ -293,7 +293,6 @@ all: #$ ExpandGlue("ALL_DEPS",""," "," "); $text .= '$(TARGET)';
+ $(TARGET): $(UICDECLS) $(OBJECTS) $(OBJMOC) #$ Expand("TARGETDEPS");
+ 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJMOC) $(LIBS)
+ #!	@ls $(OBJECTS) $(OBJMOC) > $(TARGET_OBJECTS)
+-#!$ $text .= "\tstrip \$(STRIP_FLAGS) \$@" if (Config("release") && Config("app"));
+ #$ Project("TMAKE_APP_FLAG") || EnableOutput();
+ #$ (Config("staticlib") || Project("TMAKE_APP_FLAG")) && DisableOutput();
+ all: #$ ExpandGlue("ALL_DEPS",""," ",""); Expand("DESTDIR_TARGET");
+@@ -329,9 +328,6 @@ all: #$ ExpandGlue("ALL_DEPS",""," ",""); Expand("DESTDIR_TARGET");
+ 	    }
+ 	#$}
+ #!	@ls $(OBJECTS) > $(TARGET_OBJECTS)
+-#$ DisableOutput() unless Project("STRIP_BINARY");
+-#!$ $text .= "\tstrip --strip-unneeded \$@" if Config("release");
+-#$ EnableOutput() unless Project("STRIP_BINARY");
+ 
+ staticlib: $(TARGETA)
+ 
+-- 
+1.7.0
+

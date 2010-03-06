@@ -74,5 +74,5 @@ index 9ade7b8..5535850 100644
  __instantiate(NamedTable<Id>)
  __instantiate(NamedTableIter<Id>)
 -- 
-1.6.6.1
+1.7.0
 

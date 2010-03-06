@@ -21,5 +21,5 @@ index e47d42b..72f9007 100644
     <!ENTITY dita-ot-samples-path "plugins/dita/DITA-OT1.4/samples/hierarchy.ditamap">
     <!ENTITY translations-path "$DATA_DIR/translations">
 -- 
-1.6.6.1
+1.7.0
 
