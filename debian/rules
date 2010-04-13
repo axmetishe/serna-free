@@ -76,7 +76,7 @@ override_dh_clean:
 		3rd/pyqt/4.5.4/Makefile \
 		3rd/python/2.6.2/Makefile \
 		3rd/qscintilla/2.4/Makefile \
-		3rd/qt/4.5.2/Makefile \
+		3rd/qt/4.5.3/Makefile \
 		3rd/qtpropertybrowser/2.5/Makefile \
 		3rd/sip/4.8.2/Makefile \
 		3rd/xsltproc/1.1.19/Makefile \
@@ -94,6 +94,7 @@ override_dh_clean:
 	rm -f 3rd/qtpropertybrowser/2.5/.configure_options 3rd/qtpropertybrowser/2.5/custom.pri
 	rm -f 3rd/qtpropertybrowser/configure.log 3rd/qtpropertybrowser/include
 	rm -f serna/dist/bin/xsltproc
+	rm -f serna/dist/doc-dita/version.xml
 
 override_dh_makeshlibs:
 	# We do not have any public shared libraries
