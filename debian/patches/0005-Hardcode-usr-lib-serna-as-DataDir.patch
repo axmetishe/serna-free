@@ -1,4 +1,4 @@
-From 5065ff8ad007fa303a4d66d5335eede96d1c2949 Mon Sep 17 00:00:00 2001
+From a9084a02c111e0342e1719a2ae5dbebbe019e70b Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sun, 10 Jan 2010 21:50:15 +0100
 Subject: Hardcode /usr/lib/serna as DataDir
@@ -26,5 +26,5 @@ index 99b1eac..0314afe 100644
  
  struct ParamDesc {
 -- 
-1.7.0
+1.7.0.4
 

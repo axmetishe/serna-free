@@ -1,4 +1,4 @@
-From 8c798e32341a7df5da5071e0d95c3b2a72096d04 Mon Sep 17 00:00:00 2001
+From 3f4fb143c2d6e4df644e53fc06bfaa7c86ddd1a3 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 17:47:02 +0100
 Subject: Allow using the system wide docbook-xsl installation
@@ -3146,5 +3146,5 @@ index 0000000..addf208
 +    write_file("$third_dir/docbook/MANIFEST", "include:MANIFEST.docbook");
 +#$}
 -- 
-1.7.0
+1.7.0.4
 

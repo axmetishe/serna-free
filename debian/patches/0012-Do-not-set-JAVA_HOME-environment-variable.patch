@@ -1,4 +1,4 @@
-From 0087ed75dfc15a84eceb31505887146e87e8a863 Mon Sep 17 00:00:00 2001
+From 4bcaccde8e813a45dbdd12cdcf2e1e92a6799b06 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Thu, 28 Jan 2010 19:55:02 +0100
 Subject: Do not set JAVA_HOME environment variable
@@ -58,5 +58,5 @@ index 228415f..348425d 100755
      def __str__(self):
          return PLUGIN_ID
 -- 
-1.7.0
+1.7.0.4
 

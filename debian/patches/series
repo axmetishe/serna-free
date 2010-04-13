@@ -9,7 +9,6 @@
 0009-Use-system-wide-xsltproc-in-publishing-plugin.patch
 0010-Refer-to-usr-share-doc-serna-in-config-template.patch
 0011-Refer-to-usr-share-xml-docbook-stylesheet-docbook-xs.patch
-0012-Do-not-clean-3rd-qt-icons.patch
-0013-Do-not-set-JAVA_HOME-environment-variable.patch
-0014-Use-assistant-qt4-instead-of-assistant-on-Debian.patch
-0015-Do-not-strip.patch
+0012-Do-not-set-JAVA_HOME-environment-variable.patch
+0013-Use-assistant-qt4-instead-of-assistant-on-Debian.patch
+0014-Do-not-strip.patch

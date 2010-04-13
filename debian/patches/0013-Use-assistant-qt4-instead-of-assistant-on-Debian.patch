@@ -1,4 +1,4 @@
-From 4ceef70acceff68309e00cfa3c5a8e17369b1cb4 Mon Sep 17 00:00:00 2001
+From 6e01c28142a626164cb11788d71e291ea03f7cb3 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Thu, 28 Jan 2010 21:08:46 +0100
 Subject: Use assistant-qt4 instead of assistant on Debian
@@ -8,10 +8,10 @@ Subject: Use assistant-qt4 instead of assistant on Debian
  1 files changed, 1 insertions(+), 9 deletions(-)
 
 diff --git a/serna/utils/impl/HelpAssistant.cxx b/serna/utils/impl/HelpAssistant.cxx
-index a9bb165..42516b4 100644
+index 5c9472e..73d0bbc 100644
 --- a/serna/utils/impl/HelpAssistant.cxx
 +++ b/serna/utils/impl/HelpAssistant.cxx
-@@ -62,15 +62,7 @@
+@@ -63,15 +63,7 @@
  
  using namespace Common;
  
@@ -29,5 +29,5 @@ index a9bb165..42516b4 100644
  
  static void show_error(const QString& msg)
 -- 
-1.7.0
+1.7.0.4
 
