@@ -188,6 +188,8 @@ static void update_fo_decoration(Formatter::TextFo* text_fo)
 
 bool OnlineSpellerImpl::process_fo()
 {
+    if (textFoModList_.isEmpty())
+        return false;
     Formatter::TextFo* text_fo = textFoModList_.pop_front();
     if (!text_fo) {
         deregisterHandler(this);
