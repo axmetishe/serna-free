@@ -1,10 +1,10 @@
-serna-free (0.svn288-1) UNRELEASED; urgency=low
+serna-free (0.svn288-1) unstable; urgency=low
 
   * New upstream release, 1 patch applied upstream.
   * Do not hide build output
   * Rebuilding removes dependencies on python2.5 
 
- -- Joachim Breitner <nomeata@debian.org>  Tue, 13 Apr 2010 12:27:31 +0200
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 27 Sep 2010 13:55:59 +0200
 
 serna-free (0.svn270-3) unstable; urgency=low
 
