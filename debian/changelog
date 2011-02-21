@@ -1,4 +1,4 @@
-serna-free (4.3.0-1) unstable; urgency=low
+serna-free (4.3.0.20110221-1) unstable; urgency=low
 
   * Adding myself to Uploader
   * Using new VCS: hg (bitbucket.org/syntext)
