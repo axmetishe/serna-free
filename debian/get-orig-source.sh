@@ -2,7 +2,8 @@
 
 # sudo apt-get install mercurial
 
-VERSION=4.3.0.20110221
+#VERSION=4.3.0.20110221
+VERSION=`dpkg-parsechangelog | grep '^Version' | cut -d' ' -f2 | cut -f1 -d-`
 REV=a7ce052e3472
 
 # no tag ? Let's use branch:
