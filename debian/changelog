@@ -1,3 +1,11 @@
+serna-free (4.3.0-1) unstable; urgency=low
+
+  * Adding myself to Uploader
+  * Using new VCS: hg (bitbucket.org/syntext)
+  * Add new get-orig-source target
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Mon, 21 Feb 2011 13:59:42 +0100
+
 serna-free (0.svn288-1) unstable; urgency=low
 
   * New upstream release, 1 patch applied upstream.

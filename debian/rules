@@ -106,3 +106,6 @@ override_dh_compress:
 
 override_dh_strip:
 	dh_strip --dbg-package=serna-dbg
+
+get-orig-source:
+	./debian/get-orig-source.sh

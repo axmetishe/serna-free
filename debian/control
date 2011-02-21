@@ -2,6 +2,8 @@ Source: serna-free
 Section: text
 Priority: extra
 Maintainer: Joachim Breitner <nomeata@debian.org>
+DM-Upload-Allowed: yes
+Uploaders: Mathieu Malaterre <mathieu.malaterre@gmail.com>
 Build-Depends:
  debhelper (>= 7.0.50~),
  python,
