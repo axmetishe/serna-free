@@ -1,4 +1,4 @@
-From 72db38e1778f10b34a0c5dce73687e16aeb81dbe Mon Sep 17 00:00:00 2001
+From 8e85ccc155ac22bfa9b9bc5e8b246d8c6aace0fc Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Mon, 9 Nov 2009 11:47:44 +0100
 Subject: Change make to gmake
@@ -48,5 +48,5 @@ index 6e8fcc7..6297df9 100644
  unix:BISON           = bison
  unix:TMAKE_CXXFLAGS  += -g
 -- 
-1.7.0.4
+1.7.2.3
 

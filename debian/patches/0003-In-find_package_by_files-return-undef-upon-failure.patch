@@ -1,4 +1,4 @@
-From 037fd743ed39615e426275c8a4c8c4d14856bbba Mon Sep 17 00:00:00 2001
+From 7871c96912ba4b914520b1e0364d0abf2dbc26bc Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 10 Nov 2009 17:34:10 +0100
 Subject: In find_package_by_files, return undef upon failure
@@ -24,5 +24,5 @@ index d94f1b0..383d3a7 100644
      $pkg->{"LFLAGS"} = "-L$libdir" unless $libdir eq '/usr/lib';
      $pkg->{"LIBS"} = $lib;
 -- 
-1.7.0.4
+1.7.2.3
 

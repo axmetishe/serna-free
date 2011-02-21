@@ -1,4 +1,4 @@
-From 57a15e99b80885b4281174e25357d7b815943863 Mon Sep 17 00:00:00 2001
+From cd58c7e1ecf938e960ae3bf57e2c2e02e6bdc093 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 13 Apr 2010 22:24:07 +0200
 Subject: Do not hide build output
@@ -47,5 +47,5 @@ index 292d21a..f7d833e 100644
 -        fi >$(BUILD_LOG)
 +        fi
 -- 
-1.7.0.4
+1.7.2.3
 

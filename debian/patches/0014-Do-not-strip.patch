@@ -1,4 +1,4 @@
-From cdeacd849e558f2d1638d1aa0b309bb0cc0536d9 Mon Sep 17 00:00:00 2001
+From c1aed4301eded02e7db55d33acfd39a2134eb1b1 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Sat, 6 Mar 2010 20:42:39 +0100
 Subject: Do not strip
@@ -45,5 +45,5 @@ index ae94d96..e68b000 100755
          return
  
 -- 
-1.7.0.4
+1.7.2.3
 

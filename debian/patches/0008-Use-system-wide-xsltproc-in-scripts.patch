@@ -1,4 +1,4 @@
-From dd7d891504d4872d349b3ea3b579d9746f2db548 Mon Sep 17 00:00:00 2001
+From 84e3a6d16b8005230feebad3fc2bbe49a2afaddb Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 19:45:25 +0100
 Subject: Use system-wide xsltproc in scripts
@@ -79,5 +79,5 @@ index 4086d47..7fc07df 100755
 +exec xsltproc --xinclude -o \
      "$SERNA_OUTPUT_FILE" "$SERNA_XSL_STYLESHEET" "$SERNA_XML_SRCFULLPATH"
 -- 
-1.7.0.4
+1.7.2.3
 

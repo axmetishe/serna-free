@@ -294,6 +294,14 @@ bool OpenDocumentWithDsi::doExecute(SernaDoc* sernaDoc, EventData*)
     String doc_path =
         result.root()->getSafeProperty(DocSrcInfo::DOC_PATH)->getString();
     Url docpath_url(doc_path);
+    String doc_frag = docpath_url[Url::FRAGMENT];
+    if (!doc_frag.isEmpty()) {
+        result.root()->makeDescendant("#go-to-id", doc_frag);
+        int frag_idx = doc_path.rfind('#');  // workaround for QoldUrl bug
+        if (frag_idx > 0)
+            doc_path = doc_path.mid(0, frag_idx);
+        result.root()->makeDescendant(DocSrcInfo::DOC_PATH, doc_path, true);
+    }
     if (docpath_url[Url::PROTOCOL] == NOTR("file") &&
         docpath_url.isRelative()) {
             doc_path = docpath_url.absolute();

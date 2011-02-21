@@ -1,4 +1,4 @@
-From eca299f5879291fc2470dcf69c736a9915a11002 Mon Sep 17 00:00:00 2001
+From e6fe832192178845a78db74cafad7e6e6603e6e0 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 20:08:37 +0100
 Subject: Refer to /usr/share/doc/serna in config-template
@@ -21,5 +21,5 @@ index e47d42b..72f9007 100644
     <!ENTITY dita-ot-samples-path "plugins/dita/DITA-OT1.4/samples/hierarchy.ditamap">
     <!ENTITY translations-path "$DATA_DIR/translations">
 -- 
-1.7.0.4
+1.7.2.3
 

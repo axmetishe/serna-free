@@ -1,4 +1,4 @@
-From 267157d87790af85246387d97950b1e86309c575 Mon Sep 17 00:00:00 2001
+From e72975c309c67089e9574f20713d0be30175c59c Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Tue, 12 Jan 2010 11:44:39 +0100
 Subject: Remove __int__ method from SimpleWrappedObject
@@ -26,5 +26,5 @@ index c6dd301..f9a5855 100644
      bool operator!=(const SimpleWrappedObject&) const;
  };
 -- 
-1.7.0.4
+1.7.2.3
 

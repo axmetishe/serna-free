@@ -1,4 +1,4 @@
-From 6e01c28142a626164cb11788d71e291ea03f7cb3 Mon Sep 17 00:00:00 2001
+From 0935f9da334d7d4efde5faf6b4da501e98eddcb6 Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Thu, 28 Jan 2010 21:08:46 +0100
 Subject: Use assistant-qt4 instead of assistant on Debian
@@ -29,5 +29,5 @@ index 5c9472e..73d0bbc 100644
  
  static void show_error(const QString& msg)
 -- 
-1.7.0.4
+1.7.2.3
 

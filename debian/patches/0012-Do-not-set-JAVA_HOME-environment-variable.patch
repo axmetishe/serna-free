@@ -1,4 +1,4 @@
-From 4bcaccde8e813a45dbdd12cdcf2e1e92a6799b06 Mon Sep 17 00:00:00 2001
+From ad14ddde7f4fa2c9c2929fa1c39207e2189d1c2d Mon Sep 17 00:00:00 2001
 From: Joachim Breitner <mail@joachim-breitner.de>
 Date: Thu, 28 Jan 2010 19:55:02 +0100
 Subject: Do not set JAVA_HOME environment variable
@@ -12,10 +12,10 @@ Therefore, do not set the JAVA_HOME environment variable.
  3 files changed, 0 insertions(+), 13 deletions(-)
 
 diff --git a/serna/core/qt/QtSerna.cxx b/serna/core/qt/QtSerna.cxx
-index ff126ff..e0754ea 100644
+index 4b6af57..c9a46d0 100644
 --- a/serna/core/qt/QtSerna.cxx
 +++ b/serna/core/qt/QtSerna.cxx
-@@ -226,15 +226,6 @@ int Serna::exec(int& argc, char** argv)
+@@ -227,15 +227,6 @@ int Serna::exec(int& argc, char** argv)
  
      PropertyNode* cfgRoot = config().root();
  
@@ -58,5 +58,5 @@ index 228415f..348425d 100755
      def __str__(self):
          return PLUGIN_ID
 -- 
-1.7.0.4
+1.7.2.3
 
