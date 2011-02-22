@@ -1,5 +1,6 @@
 serna-free (4.3.0.20110221-1) unstable; urgency=low
 
+  * New upstream relese (Closes: #613981)
   * Adding myself to Uploader
   * Using new VCS: hg (bitbucket.org/syntext)
   * Add new get-orig-source target
