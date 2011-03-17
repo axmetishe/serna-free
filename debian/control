@@ -30,6 +30,7 @@ Build-Depends:
  pyqt4-dev-tools,
  libaspell-dev,
  docbook-xsl (>= 1.75.2+dfsg-5),
+ libqtassistantclient-dev
 Build-Conflicts:
  qt3-dev-tools
 Standards-Version: 3.8.4

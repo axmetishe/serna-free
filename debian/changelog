@@ -1,3 +1,9 @@
+serna-free (4.3.0.20110221-2) unstable; urgency=low
+
+  * Add B-D to libqtassistantclient-dev. Closes: #618204
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Thu, 17 Mar 2011 14:42:29 +0100
+
 serna-free (4.3.0.20110221-1) unstable; urgency=low
 
   * New upstream relese (Closes: #613981)
