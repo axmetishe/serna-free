@@ -1,0 +1,96 @@
+### JetBrains
+*.iml
+*.ipr
+*.iws
+.idea/
+/out/
+.idea_modules/
+atlassian-ide-plugin.xml
+
+### Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+### Ant
+output/
+*.log
+*.MANIFEST.MF
+*.build.number
+
+### Gradle
+#build/
+.gradle/
+*.lock
+*.bin
+
+### C template
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+
+### C++ template
+# Compiled Object files
+*.slo
+
+# Fortran module files
+#*.mod
+
+# Compiled Static libraries
+*.lai
+
+### Qt template
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+qrc_*.cpp
+#ui_*.h
+#Makefile*
+#*-build-*
+
+### QtCreator
+*.autosave
+
+### QtCtreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
